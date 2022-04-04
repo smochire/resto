@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <title>Reçu</title>
+    <link rel="stylesheet" th:href="@{/css/style-invoice.css}" media="all" />
+  </head>
+  <body>
+    <header class="clearfix">
+        
+      <h1>FACTURE</h1>
+      <div id="company" class="clearfix">
+        <div class="col-sm-6 col-md-6 pull-left">
+            <img th:src="@{/images/logo-51x70.png}">
+        </div>
+        <div><h2>Click.Resto</h2></div>
+        <div>455 Foggy Heights,<br /> AZ 85004, US</div>
+        <div>(602) 519-0450</div>
+        <div><a href="mailto:click.resto@example.com">click.resto@example.com</a></div>
+      </div>
+      <div id="project">
+        <div><span>CLIENT</span> John Doe</div>
+        <div><span>ADRESSE</span> 796 Silver Harbour, TX 79273, US</div>
+        <div><span>EMAIL</span> <a href="mailto:john@example.com">john@example.com</a></div>
+        <div><span>DATE</span> 17 Août 2021 12:00</div>
+        <div><span>PAIEMENT</span> 17 Août 2021 13:00</div>
+        <div><span>MODE</span>Mvola</div>
+      </div>
+    </header>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th class="service">Commande Table N° 2</th>
+            <th class="desc">DESCRIPTION</th>
+            <th>PRIX</th>
+            <th>QUANTITE</th>
+            <th>TOTAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="service">Menu</td>
+            <td class="desc">Chicken Pakora</td>
+            <td class="unit">$6.00</td>
+            <td class="qty">2</td>
+            <td class="total">12.0 €</td>
+          </tr>
+          <tr>
+            <td class="service">Entrée</td>
+            <td class="desc">Samoussa</td>
+            <td class="unit">1.45 €</td>
+            <td class="qty">8</td>
+            <td class="total">11.6 €</td>
+          </tr>
+          <tr>
+            <td colspan="4">SUBTOTAL</td>
+            <td class="total">23.6 €</td>
+          </tr>
+          <tr>
+            <td colspan="4">TAX 20%</td>
+            <td class="total">4.72 €</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="grand total">GRAND TOTAL</td>
+            <td class="grand total">28.32 €</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      La facture a été créée sur ordinateur et est valable sans la signature et le sceau..
+    </footer>
+  </body>
+</html>

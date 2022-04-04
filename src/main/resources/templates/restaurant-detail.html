@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en"  xmlns:th="https://www.thymeleaf.org">
+
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title Of Site -->
+	<title th:text="*{'Detail  de '+restaurant.nomResto}"> </title>
+	<meta name="description" content="TheFoody is a food ordering platform which brings restaurants and food lovers together. Food ordering online is easier than any other platforms.">
+	<meta name="keywords" content="food, order online, restaurant, reservation, book a table, foodies, cafe, recipes, menu, dishes, chefs and cooking experts ">
+	<meta name="author" content="iglyphic">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link  th:replace="~{fragment/outil::css}"/>
+	
+</head>
+
+
+<body class="not-transparent-header">
+
+	<!-- start Container Wrapper -->
+	<div class="container-wrapper">
+
+		<!-- start Header -->
+		<header id="header">
+			<!-- start Navbar (Header) -->
+			<nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function">
+
+				<div class="container">
+
+					<div class="logo-wrapper">
+						<div class="logo">
+							<a href="/"><img th:src="@{/images/logo-51x70.png}" alt="Logo" /></a>
+						</div>
+					</div>
+
+					<div id="navbar" class="navbar-nav-wrapper navbar-arrow">
+
+						<ul class="nav navbar-nav" id="responsive-menu">
+							<li>
+								<a href="/">Accueil</a>
+
+							</li>
+
+							<li>
+								<a href="">Information</a>
+								<ul>
+									<li><a href="/accueil/how">Guide</a></li>
+									<li><a href="/accueil/apropos">A propos de nous</a></li>
+									<li><a href="/accueil/contact">Contact</a></li>
+									<li><a href="/accueil/policy">Politique de confidentialité</a></li>
+								</ul>
+							</li>
+
+						</ul>
+
+					</div><!--/.nav-collapse -->
+
+
+				</div>
+
+				<div id="slicknav-mobile"></div>
+
+			</nav>
+			<!-- end Navbar (Header) -->
+		</header>
+		<!-- end Header -->
+
+		<!-- start Main Wrapper -->
+		<div class="main-wrapper">
+		
+			<!-- start breadcrumb -->
+			<div class="breadcrumb-wrapper">
+			
+				<div class="container">
+				
+					<ol class="breadcrumb-list booking-step">
+						<li><a href="#">Home</a></li>
+						<li><span>A propos du restaurant</span></li>
+					</ol>
+					
+				</div>
+				
+			</div>
+			<!-- end breadcrumb -->
+			
+			<div class="section sm">
+			
+				<div class="container">
+				
+					<div class="row">
+						
+							<div class="col-sm-5 col-md-3">
+							
+								<div class="job-detail-sidebar">
+									
+									<ul class="meta-list clearfix">
+										<li>
+											<h4 class="heading">Location:</h4>
+											<span th:text="${restaurant.adresse}"></span>
+										</li>
+										<li>
+											<h4 class="heading">Cuisine:</h4>
+											<span th:text="${restaurant.typeCuisine}"></span>
+										</li>
+									</ul>
+									
+									<div class="job-detail-company-overview mt-15 clearfix">
+									
+										<h3>Restaurant overview</h3>
+										<div class="image">
+											<img th:src="*{'data:image/jpeg;base64,'+restaurant.logo}" alt="image" class="img-circle" >
+										</div>
+										
+										<p><span class="font600" th:text="${restaurant.nomResto}"></span> est fier de créer et de servir la cuisine bangladaise et indienne la plus authentique.
+											En mélangeant des ingrédients frais et des épices aromatiques, nous avons l'intention de produire la meilleure qualité de plats à emporter pour nos clients. 
+											Que vous commandiez pour un repas tranquille à deux ou pour une soirée animée.</p>
+										
+									</div>
+									
+								</div>
+
+							</div>
+							
+							<div class="col-sm-7 col-md-9">
+							
+								<div class="restaurant-detail-wrapper">
+								
+									<div class="restaurant-detail-header bb mb-30">
+												
+										<h2 class="heading mb-15"><span th:text="${restaurant.nomResto}"></span></h2>
+									
+										<div class="meta-div clearfix mb-25">
+											<span>Cuisine <a href="#"><span th:text="${restaurant.typeCuisine}"></span></a> </span>
+											<span class="res-btn label label-success">Obtenir une offre</span>
+										</div>
+										
+									</div>
+									
+									<div class="restaurant-detail-content mt-30 clearfix">
+											
+										<h3>Description</h3>
+
+										<p class="font600 font16"><span th:text="${restaurant.message}"></span> </p>
+										
+										<h3>Installations</h3>
+										
+										<ul>
+											<li>Click.Resto est un portail en ligne.</li>
+											<li>Commande de nourriture et livraison dans les restaurants de votre choix.</li>
+											<li>Réservation de tables et restaurants.</li>
+											<li>Offres et remises.</li>
+											<li>Réservation en ligne des salles de fête.</li>
+										</ul>
+										<div class="clear"></div>
+										<hr class="mt-15">
+										<div class="col-sm-12 mt-10">
+											<form action="/restaurant/profile">
+												<button class="btn btn-warning">Revenir</button>
+											</form>
+										</div>
+
+									</div>
+								</div>
+								
+							</div>
+						
+						</div>
+						
+					</div>
+				
+				</div>
+			
+			</div>
+
+		<!-- start footer -->
+		<footer class="footer-wrapper-area">
+
+			<!-- start footer area -->
+			<div class="footer-area-content">
+				<!-- Newsletter -->
+				
+				<!-- END: Newsletter -->
+
+				<div class="container">
+					<div class="footer-wrapper style-3">
+						<footer class="type-1">
+							<div class="footer-columns-entry">
+								<div class="row">
+									<div class="col-md-4 col-sm-4">
+										<img th:src="@{/images/logo-51x70.png}" alt="logo de Click.Resto">
+										<div class="clear"></div>
+									</div>
+
+									<div class="col-md-4 col-sm-4">
+										<img th:src="*{'data:image/jpeg;base64,'+restaurant.logo}" alt="image" class="img-circle"  width="150px" height="150px" >
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</footer>
+					</div>
+				</div>
+
+
+			</div>
+			<!-- footer area end -->
+
+			<div class="bottom-footer">
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-sm-6 col-md-6">
+
+							<p class="copy-right">&#169; Copyright 2022 CDAN-02</p>
+
+						</div>
+						<div class="col-sm-6 col-md-6">
+							<ul class="bottom-footer-menu for-social">
+								<li><a href="#"><i class="ri ri-twitter" data-toggle="tooltip" data-placement="top" title="twitter"></i></a></li>
+								<li><a href="#"><i class="ri ri-facebook" data-toggle="tooltip" data-placement="top" title="facebook"></i></a></li>
+								<li><a href="#"><i class="ri ri-google-plus" data-toggle="tooltip" data-placement="top" title="google plus"></i></a></li>
+								<li><a href="#"><i class="ri ri-youtube-play" data-toggle="tooltip" data-placement="top" title="youtube"></i></a></li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</footer>
+		<!-- end footer -->
+		
+	</div> <!-- / .wrapper -->
+	<!-- end Container Wrapper -->
+ 
+ 
+<!-- start Back To Top -->
+<div id="back-to-top">
+   <a href="#"><i class="ion-ios-arrow-up"></i></a>
+</div>
+<!-- end Back To Top -->
+
+
+<!-- JS -->
+	<script th:replace="~{fragment/outil::foot}"/>
+
+</body>
+
+
+
+</html>

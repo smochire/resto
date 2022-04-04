@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en "xmlns:th="https://www.thymeleaf.org">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title Of Site -->
+	<title>Click.Resto - Etape 2 de paiement</title>
+	<meta name="description" content="Click.Resto est une plateforme de commande de nourriture qui met en relation les restaurants et les amateurs de nourriture. La commande de nourriture en ligne est plus facile que sur toute autre plateforme.">
+	<meta name="keywords" content="nourriture, commander en ligne, restaurant, réservation, réserver une table, gourmets, café, recettes, menu, plats, chefs et experts en cuisine ">
+	<meta name="author" content="iglyphic">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+        <link  th:replace="~{fragment/outil::css}"/>
+
+	<link th:href="@{/js/plugins/magnific-popup/magnific-popup.css}" rel="stylesheet" type="text/css">
+	<link th:href="@{/js/plugins/datepicker/datepicker.css}" rel="stylesheet" type="text/css">
+
+        <!-- CSS Custom -->
+
+</head>
+
+
+<body class="not-transparent-header">
+
+	<!-- start Container Wrapper -->
+	<div class="container-wrapper">
+
+		<!-- start Header -->
+		<header id="header">
+			<!-- start Navbar (Header) -->
+			<nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function">
+
+				<div class="container">
+
+					<div class="logo-wrapper">
+						<div class="logo">
+							<a href="index.html"><img th:src="@{/images/logo.png}" alt="Logo" /></a>
+						</div>
+					</div>
+
+					<div id="navbar" class="navbar-nav-wrapper navbar-arrow">
+
+						<ul class="nav navbar-nav" id="responsive-menu">
+
+							<li>
+								<a href="/">Accueil</a>
+								<ul>
+									<li><a href="/accueil/client/1">Commander</a></li>
+									<li><a href="all-cuisines.html">Catégorie</a></li>
+								</ul>
+							</li>
+
+							<li>
+								<a href="/restaurant/register">Devenir partenaire</a>
+							</li>
+
+							<li>
+								<a href="">Information</a>
+								<ul>
+									<li><a href="how-it-work.html">Guide</a></li>
+									<li><a href="about-us.html">A propos de nous</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="privacy-policy.html">Politique de confidentialité</a></li>
+								</ul>
+							</li>
+
+
+						</ul>
+
+					</div><!--/.nav-collapse -->
+
+					<div class="nav-mini-wrapper">
+						<ul class="nav-mini sign-in">
+							<li><a href="login.html"><font size="3">S'identifier</font></a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div id="slicknav-mobile"></div>
+
+			</nav>
+			<!-- end Navbar (Header) -->
+		</header>
+		<!-- end Header -->
+
+		<!-- start Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- start hero-header -->
+			<div class="breadcrumb-wrapper">
+			
+				<div class="container">
+				
+					<ol class="breadcrumb-list">
+						<li><a href="index.html">Home</a></li>
+						<li><span>Paiement</span></li>
+					</ol>
+					
+				</div>
+				
+			</div>
+			<!-- end hero-header -->
+
+			<div class="error-page-wrapper">
+
+				<div class="container">
+
+					<!-- start make payment top section -->
+					<div class="row make-payment-company" th:each="commandeByID:${commande}">
+						<div class="col-md-8" >
+							<div class="row make-payment-company-title">
+								<div class="col-md-6 col-xs-6 pay-to">
+									Client
+								</div>
+								<div class="col-md-6 col-xs-6 description">
+									Restaurant
+								</div>
+							</div>
+							<div class="row make-payment-company-info">
+								<div class="col-md-6 col-xs-6 pay-to-name">
+									[[${commandeByID.client.nom}]]
+								</div>
+								<div class="col-md-6 col-xs-6">
+									[[${commandeByID.restaurant.nomResto}]]
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 gbp-content-all">
+							<div class="gbp-content text-center">
+								$[[${commandeByID.montant}]] €
+							</div>
+						</div>
+					</div>
+					<!-- end make payment top section -->
+
+					<!-- start card-billing-details -->
+					<div class="card-billing-details">
+						<div class="row">
+							<!-- start card details -->
+							<div class="col-md-6">
+								<div class="card-details-top">
+									<div class="card-icon">
+										<i class="fa fa-file-text-o" aria-hidden="true"></i>
+									</div>
+									<div class="card-details-title">
+										Détails de la carte
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="card-details-field">
+									<div class="row">
+										<div class="col-md-3 pr0">
+											<input class="form-control" type="text" placeholder="Titre">
+										</div>
+										<div class="col-md-9">
+											<input class="form-control" type="text" placeholder="Prénom">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6 pr0">
+											<input class="form-control" type="text" placeholder="Deuxième prénom">
+										</div>
+										<div class="col-md-6">
+											<input class="form-control" type="text" placeholder="Nom de famille">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<input class="form-control" type="text" placeholder="Nom affiché sur la carte *">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-8 pr0 single-card-info">
+											<input class="form-control" type="text" placeholder="Insérer le numéro de carte">
+											<div class="single-card-photo">
+												<img class="img-responsive" th:src="@{/images/VISA.png}" alt="">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<input class="form-control" type="text" placeholder="code de sécurité">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-8 pr0">
+											<div class="card-expire-title pull-left">
+												Date d'expiration de la carte :
+											</div>
+											<div class="card-expire-field pull-right">
+												<div class="form-group">
+													<select class="form-control" id="sel1">
+														<option>- Mois* -</option>
+														<option>Jan</option>
+														<option>Feb</option>
+														<option>Mars</option>
+													</select>
+												</div>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<select class="form-control" id="sel2">
+													<option>-Année*-</option>
+													<option>2022</option>
+													<option>2023</option>
+													<option>2024</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end card details -->
+
+							<!-- start billing details -->
+							<div class="col-md-6">
+								<div class="billing-details-top">
+									<div class="billing-details-icon">
+										<i class="fa fa-file-text-o" aria-hidden="true"></i>
+									</div>
+									<div class="billing-details-title">
+										Détails de la facturation
+									</div>
+									<div class="clearfix"></div>
+								</div>
+
+								<div class="billing-details-field">
+									<div class="row">
+										<div class="col-md-12">
+											<input class="form-control" type="text" placeholder="Nom et prénom">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6 pr0">
+											<input class="form-control" type="text" placeholder="Adresse">
+										</div>
+										<div class="col-md-6">
+											<input class="form-control" type="text" placeholder="Ville">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6 pr0">
+											<input class="form-control" type="text" placeholder="Pays">
+										</div>
+										<div class="col-md-6">
+											<input class="form-control" type="text" placeholder="Boite postal">
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<select class="form-control" id="sel3">
+													<option>UNITED KINGDOM</option>
+													<option>20018</option>
+													<option>2020</option>
+													<option>2022</option>
+												</select>
+											</div>
+										</div>
+
+									</div>
+									<div class="row">
+										<div class="col-md-6 pr0">
+											<input class="form-control" type="email" placeholder="Email">
+										</div>
+										<div class="col-md-6">
+											<input class="form-control" type="tel" placeholder="Téléphone">
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- end billing details -->
+							<div class="col-md-12 marked-required">
+								<p> * Champ obligatoire</p>
+							</div>
+
+						</div>
+
+
+					</div>
+					<!-- end card-billing-details -->
+
+					<!-- start order-shipping-details -->
+					<div class="order-items-shipping-details">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="order-items-details-top">
+									<div class="order-cart-icon">
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+									</div>
+									<div class="order-items-details-title">
+										order items
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="order-items">
+									<div class="table-responsive">
+										<table class="table">
+											<thead>
+											<tr>
+												<th>Menu</th>
+												<th>Quantité</th>
+												<th>Montant</th>
+											</tr>
+											</thead>
+											<tbody>
+                                                                                            <tr th:each="item:${itempanier}">
+                                                                                                    <td>[[${item.menu.nom}]]<br/>
+                                                                                                            <div class="item-name-small">[[${item.menu.categorie.nom}]]</div>
+                                                                                                    </td>
+                                                                                                    <td class="text-center">[[${item.quantite}]]</td>
+                                                                                                    <td>[[${item.montant}]]</td>
+                                                                                            </tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- end order-shipping-details -->
+
+					<!-- start proceed to order -->
+					<div class="row">
+						<div class="col-md-12 payment-btn text-right">
+							
+							
+							<button onclick="window.location.href = '${/}';"class="btn btn-danger">Annuler</button>
+							
+						
+							<button onclick="window.location.href = '${/panier/paiementsuccess}';" class="btn btn-success">Continuer</button>
+						
+						</div>
+					</div>
+					<!-- end proceed to order -->
+
+
+				</div>
+			
+			</div>
+
+			<!-- start footer -->
+			<footer class="footer-wrapper-area">
+
+				<!-- start footer area -->
+				<div class="footer-area-content">
+					
+
+					<div class="container">
+						<div class="footer-wrapper style-3">
+							<footer class="type-1">
+								<div class="footer-columns-entry">
+									<div class="row">
+										<div class="col-md-3 col-sm-3">
+											<h3 class="column-title">Cuisines de la maison</h3>
+											<ul class="column">
+												<li><a href="#">Italie</a></li>
+												<li><a href="#">Chinois</a></li>
+												<li><a href="#">Turc</a></li>
+												<li><a href="#">Fruits de mer</a></li>
+												<li><a href="#">Indien</a></li>
+												<li><a href="#">Malagasy</a></li>
+											</ul>
+											<div class="clear"></div>
+										</div>
+
+										<div class="col-md-3 col-sm-3">
+											<h3 class="column-title">Nos restaurants</h3>
+											<ul class="column">
+												<li><a href="#">Nerone Ristorante </a></li>
+												<li><a href="#">Sakamanga</a></li>
+												<li><a href="#">Le Raphia</a></li>
+												<li><a href="#">Le Marais</a></li>
+												<li><a href="#">Vatel Restaurant</a></li>
+												<li><a href="#">Tamboho Hotel</a></li>
+											</ul>
+											<div class="clear"></div>
+										</div>
+
+										<div class="col-md-3 col-sm-3">
+											<h3 class="column-title">Thefoody</h3>
+											<ul class="column">
+												<li><a href="about-us.html">A propos de nous</a></li>
+												<li><a href="#">Nos termes et conditions</a></li>
+												<li><a href="privacy-policy.html"> Politique de confidentialité</a></li>
+												<li><a href="#">Devenir partenaire</a></li>
+
+											</ul>
+											<div class="clear"></div>
+										</div>
+									</div>
+								</div>
+							</footer>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- footer area end -->
+				
+				<div class="bottom-footer">
+				
+					<div class="container">
+					
+						<div class="row">
+						
+							<div class="col-sm-4 col-md-4">
+					
+								<p class="copy-right">&#169; Copyright 2022</p>
+								
+							</div>
+							
+							<div class="col-sm-4 col-md-4">
+							
+								<ul class="bottom-footer-menu">
+									
+								</ul>
+							
+							</div>
+							
+							<div class="col-sm-4 col-md-4">
+								<ul class="bottom-footer-menu for-social">
+									<li><a href="#"><i class="ri ri-twitter" data-toggle="tooltip" data-placement="top" title="twitter"></i></a></li>
+									<li><a href="#"><i class="ri ri-facebook" data-toggle="tooltip" data-placement="top" title="facebook"></i></a></li>
+									<li><a href="#"><i class="ri ri-google-plus" data-toggle="tooltip" data-placement="top" title="google plus"></i></a></li>
+									<li><a href="#"><i class="ri ri-youtube-play" data-toggle="tooltip" data-placement="top" title="youtube"></i></a></li>
+								</ul>
+							</div>
+						
+						</div>
+
+					</div>
+					
+				</div>
+			
+			</footer>
+			<!-- end footer -->
+			
+		</div>
+		<!-- end Main Wrapper -->
+
+	</div> <!-- / .wrapper -->
+	<!-- end Container Wrapper -->
+ 
+ 
+<!-- start Back To Top -->
+<div id="back-to-top">
+   <a href="#"><i class="ion-ios-arrow-up"></i></a>
+</div>
+<!-- end Back To Top -->
+
+
+<!-- JS -->
+<script th:replace="~{fragment/outil::foot}"/>
+
+<script th:src="@{/js/jquery.easing.min.js}"></script>
+<script th:src="@{/js/jquery.sticky.js}"></script>
+
+<script th:src="@{/js/plugins/datepicker/bootstrap-datepicker.js}"></script>
+<script th:src="@{/js/plugins/magnific-popup/jquery.magnific-popup.min.js}"></script>
+
+
+
+</body>
+
+
+
+
+</html>

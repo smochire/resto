@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title Of Site -->
+	<title>Thefoody - Order Online Portal Responsive HTML Template</title>
+	<meta name="description" content="TheFoody is a food ordering platform which brings restaurants and food lovers together. Food ordering online is easier than any other platforms.">
+	<meta name="keywords" content="food, order online, restaurant, reservation, book a table, foodies, cafe, recipes, menu, dishes, chefs and cooking experts ">
+	<meta name="author" content="iglyphic">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link  th:replace="~{fragment/outil::css}"/>
+	<style>
+		.upload{
+			font-size: 11px;
+			background: white;
+			border-radius: 50px;
+			box-shadow: 5px 5px 10px black;
+			width: 280px;
+			height: 50px;
+			outline: none;
+		}
+		::-webkit-file-upload-button{
+			color:white;
+			padding: 20px;
+			border: none;
+			border-radius: 50px;
+			background: teal;
+		}
+		::-webkit-file-upload-button:hover {
+			background: palegreen;
+		}
+	</style>
+	
+</head>
+
+
+<body class="not-transparent-header">
+
+<!-- start Container Wrapper -->
+<div class="container-wrapper">
+
+	<!-- start Header -->
+	<header id="header">
+		<!-- start Navbar (Header) -->
+		<nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function">
+
+			<div class="container">
+
+				<div class="logo-wrapper">
+					<div class="logo">
+						<a href="/"><img th:src="@{/images/logo-51x70.png}" alt="Logo" /></a>
+					</div>
+				</div>
+
+				<div id="navbar" class="navbar-nav-wrapper navbar-arrow">
+
+					<ul class="nav navbar-nav" id="responsive-menu">
+						<li>
+							<a href="/">Accueil</a>
+
+						</li>
+
+						<li>
+							<a href="/restaurant/register">Devenir partenaire</a>
+						</li>
+						<li>
+							<a href="">Information</a>
+							<ul>
+								<li><a href="/accueil/how">Guide</a></li>
+								<li><a href="/accueil/apropos">A propos de nous</a></li>
+								<li><a href="/accueil/contact">Contact</a></li>
+								<li><a href="/accueil/policy">Politique de confidentialité</a></li>
+							</ul>
+						</li>
+
+					</ul>
+
+				</div><!--/.nav-collapse -->
+
+				<div class="nav-mini-wrapper">
+					<ul class="nav-mini sign-in">
+						<li><a href="/restaurant/login"><font size="3">S'identifier</font></a></li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div id="slicknav-mobile"></div>
+
+		</nav>
+		<!-- end Navbar (Header) -->
+	</header>
+	<!-- end Header -->
+
+	<!-- start Main Wrapper -->
+	<div class="main-wrapper">
+
+		<!-- start hero-header -->
+		<div class="breadcrumb-wrapper">
+
+			<div class="container">
+
+				<ol class="breadcrumb-list">
+					<li><a href="/">Home</a></li>
+					<li><span>S'identifier</span></li>
+				</ol>
+
+			</div>
+
+		</div>
+		<!-- end hero-header -->
+
+		<div class="error-page-wrapper">
+
+			<div class="container">
+
+				<div class="row">
+
+
+
+					<!-- Join team container -->
+
+					<div class="join-our-team-wrapper">
+
+						<button class="btn btn-primary btn-hidden btn-lg collapsed" data-toggle="collapse" data-target="#apply-job-toggle">Joignez-vous à notre équipe</button>
+
+						<div id="apply-job-toggle" class="collapse">
+
+							<div class="collapse-inner clearfix col-sm-6 col-md-4">
+								<img th:src="@{/images/partenaire-199x132.png}" alt="partenaire1" />
+
+							</div>
+							<div class="collapse-inner clearfix col-sm-6 col-md-4">
+
+								<img th:src="@{/images/partenaire-200x133.png}" alt="partenaire2" />
+							</div>
+						</div>
+					</div>
+					<div class="apply-job-inner">
+
+						<h3 class="heading mb-5">Devenez vite notre partenaire!</h3>
+						<p>L'êtes-vous déja ? <a href="/restaurant/login">Connectez-vous</a> maintenant.</p>
+
+
+						<form method="post" id="form"  action="/restaurant/demande"  th:object="${restaurant}" enctype="multipart/form-data">
+
+							<div class="row">
+
+								<div class="col-sm-6 col-md-4">
+									<div class="form-group">
+										<label>Nom</label>
+										<input type="text" id="nom" class="form-control" th:field="*{nom}"/>
+										<small></small>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-md-4">
+									<div class="form-group">
+										<label>Nom du restaurant</label>
+										<input type="text" id="nomResto" class="form-control" th:field="*{nomResto}"/>
+										<small></small>
+									</div>
+								</div>
+
+								<div class="col-sm-12 col-md-4">
+									<div class="form-group">
+										<label>Type de cuisine</label>
+										<input type="text" id="typeCuisine" class="form-control" th:field="*{typeCuisine}"/>
+										<small></small>
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col-sm-6 col-md-4">
+									<div class="form-group">
+										<label>E-mail</label>
+										<input type="email" id="email" class="form-control" th:field="*{email}"/>
+										<small></small>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-md-4">
+									<div class="form-group">
+										<label>Télephone</label>
+										<input type="tel" id="telephone" class="form-control" th:field="*{telephone}"/>
+										<small></small>
+									</div>
+								</div>
+
+								<div class="col-sm-6 col-md-4">
+									<div class="form-group">
+										<label>Adresse</label>
+										<input type="text" class="form-control" id="adresse" th:field="*{adresse}"/>
+										<small></small>
+									</div>
+								</div>
+
+							</div>
+
+							<hr class="mt-15">
+
+							<h4 class="heading pull-left">Ajouter votre logo</h4>
+
+							<div class="row">
+								<div class="col-sm-12 col-md-12">
+									<div class="form-group">
+										<div>
+											<input type="file" class="upload" name="image" accept="image/png, image/jpeg" id="logo">
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-12 col-md-12">
+									<p class="font12 line12 mb-12 pull-left">(Votre logo doit être au format .png ou .jpg et ne doit pas dépasser 250ko)</p>
+								</div>
+							</div>
+
+
+							<hr class="mt-15">
+
+						<div class="row">
+
+							<div class="col-sm-12 col-md-12">
+								<div class="form-group">
+									<label><h4>Votre message d'accompagnement</h4></label>
+									<textarea class="form-control" rows="6" th:field="*{message}" id="message"></textarea>
+								</div>
+							</div>
+						</div>
+						<div>
+							<button  type="submit" id="btnShowMsg"  class="btn btn-primary"  name="submit">Envoyer une demande</button>
+						</div>
+
+						</form>
+
+					</div>
+
+				</div>
+
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- start footer -->
+	<footer class="footer-wrapper-area">
+
+		<!-- start footer area -->
+		<div class="footer-area-content">
+			<!-- Newsletter -->
+
+			<!-- END: Newsletter -->
+
+			<div class="container">
+				<div class="footer-wrapper style-3">
+					<footer class="type-1">
+						<div class="footer-columns-entry">
+							<div class="row">
+								<<div class="col-md-4 col-sm-4">
+								<h3 class="column-title">Cuisines populaires</h3>
+								<ul class="column">
+									<li><a href="/accueil/cuisines">Tout type de cuisine</a></li>
+									<th:block  th:each="restaurant:${restaurants}">
+										<li><a th:href="*{'/accueil/client'+restaurant.id}"><span  th:text="${restaurant.typeCuisine}"></span></a></li>
+									</th:block>
+								</ul>
+								<div class="clear"></div>
+							</div>
+
+								<div class="col-md-4 col-sm-4">
+									<h3 class="column-title">Restaurants</h3>
+									<ul class="column">
+										<th:block  th:each="restaurant:${restaurants}">
+											<li><a th:href="*{'/accueil/client'+restaurant.id}"><span  th:text="${restaurant.nomResto}"></span></a></li>
+										</th:block>
+									</ul>
+									<div class="clear"></div>
+								</div>
+
+								<div class="col-md-3 col-sm-3">
+									<h3 class="column-title">Thefoody</h3>
+									<ul class="column">
+										<li><a href="/accueil/apropos">A propos de nous</a></li>
+										<li><a href="/accueil/policy"> Politique de confidentialité</a></li>
+										<li><a href="/restaurant/register">Devenir partenaire</a></li>
+
+									</ul>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+
+
+		</div>
+		<!-- footer area end -->
+
+		<div class="bottom-footer">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-sm-6 col-md-6">
+
+						<p class="copy-right">>&#169; Copyright 2022 CDAN-02</p>
+
+					</div>
+					<div class="col-sm-6 col-md-6">
+						<ul class="bottom-footer-menu for-social">
+							<li><a href="#"><i class="ri ri-twitter" data-toggle="tooltip" data-placement="top" title="twitter"></i></a></li>
+							<li><a href="#"><i class="ri ri-facebook" data-toggle="tooltip" data-placement="top" title="facebook"></i></a></li>
+							<li><a href="#"><i class="ri ri-google-plus" data-toggle="tooltip" data-placement="top" title="google plus"></i></a></li>
+							<li><a href="#"><i class="ri ri-youtube-play" data-toggle="tooltip" data-placement="top" title="youtube"></i></a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</footer>
+	<!-- end footer -->
+
+</div>
+<!-- end Main Wrapper -->
+
+</div> <!-- / .wrapper -->
+<!-- end Container Wrapper -->
+
+
+<!-- start Back To Top -->
+<div id="back-to-top">
+	<a href="#"><i class="ion-ios-arrow-up"></i></a>
+</div>
+
+
+<!-- JS -->
+	<script th:replace="~{fragment/outil::foot}"/>
+
+<script>
+	let  form = document.querySelector("#form");
+	form.email.addEventListener('change',()=>{
+		validEmail(form.email);
+	});
+	form.telephone.addEventListener('change',()=>{
+		validPhone(form.telephone);
+	});
+	form.adresse.addEventListener('change',()=>{
+		validAdresse(form.adresse);
+	});
+	form.nom.addEventListener('change',()=>{
+		validNom(form.nom);
+	});
+	form.submit.addEventListener('click',()=>{
+		validNomResto(form.nomResto);
+		validCuisine(form.typeCuisine);
+	});
+	form.addEventListener('submit',(e)=>{
+
+		if(!validNom(form.nom) || !validAdresse(form.adresse) || !validPhone(form.telephone) || !validEmail(form.email) || !validCuisine(form.typeCuisine)  || !validNomResto(form.nomResto))
+		{
+			e.preventDefault();
+		}
+
+	});
+ 	const validEmail = function (inputEmail) {
+		 var re = /\S+@\S+\.\S+/;
+		 let testEmail=re.test(inputEmail.value);
+		 let small = inputEmail.nextElementSibling;
+		 if(!testEmail)
+		 {
+			 small.innerHTML = "E-mail non valide";
+			 small.classList.add("text-danger");
+			 return false;
+		 }else{
+			 small.innerHTML = "";
+			 return true;
+		 }
+ 	};
+
+	const validPhone = function (inputPhone) {
+		const re = /^\+\d{12}$/;
+		let small = inputPhone.nextElementSibling;
+		let testPhone=re.test(inputPhone.value.replaceAll(" ",""));
+		if(!testPhone)
+		{
+			small.innerHTML = "Téléphone non valide";
+			small.classList.add("text-danger");
+			return false;
+		}else{
+			small.innerHTML = "";
+			return true;
+		}
+	};
+
+	const validAdresse = function (inputAdresse) {
+			const re  = /^\d{2}\S+\d{4,5}\S+$/;
+			let small =  inputAdresse.nextElementSibling;
+			let testAdresse = re.test(inputAdresse.value.replaceAll( " ",""));
+			if(!testAdresse)
+			{
+				small.innerHTML = "L'adresse n'est pas valide";
+				small.classList.add("text-danger");
+				return false;
+			}else{
+				small.innerHTML = "";
+				return true;
+			}
+	};
+
+	const validNom = function (inputNom) {
+		 const re = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
+		 let small = inputNom.nextElementSibling;
+		 let testNom = re.test(inputNom.value.replaceAll (" ",""));
+		 if(!testNom)
+		 {
+		 	small.innerHTML = "Le nom n'est pas valide";
+		 	small.classList.add("text-danger");
+		 	return false;
+		 }else{
+		 	small.innerHTML = "";
+		 	return true;
+		 }
+	};
+
+	const validCuisine = function(inputCuisine){
+		let small = inputCuisine.nextElementSibling;
+		console.log(small);
+		if(inputCuisine.value.length<2){
+			small.innerHTML  = "Le type de cuisine doit  mentionner";
+			small.classList.add("text-danger");
+			return false;
+		}else{
+			small.innerHTML = "";
+			return true;
+		}
+	};
+
+	const validNomResto = function(inputNomResto){
+		let small = inputNomResto.nextElementSibling;
+		console.log(small);
+		if(inputNomResto.value.length<2){
+			small.innerHTML  = "Le nom du restaurant doit  mentionner";
+			small.classList.add("text-danger");
+			return false;
+		}else{
+			small.innerHTML = "";
+			return true;
+		}
+	};
+
+</script>
+</body>
+
+
+
+
+</html>

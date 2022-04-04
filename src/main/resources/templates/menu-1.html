@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title Of Site -->
+	<title>Accueil Client || Click.Resto</title>
+	<meta name="description" content="TheFoody is a food ordering platform which brings restaurants and food lovers together. Food ordering online is easier than any other platforms.">
+	<meta name="keywords" content="food, order online, restaurant, reservation, book a table, foodies, cafe, recipes, menu, dishes, chefs and cooking experts ">
+	<meta name="author" content="iglyphic">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link  th:replace="~{fragment/outil::css}"/>
+
+	<link th:href="@{/js/plugins/magnific-popup/magnific-popup.css}" rel="stylesheet" type="text/css">
+	<link th:href="@{/js/plugins/datepicker/datepicker.css}" rel="stylesheet" type="text/css">
+
+
+
+	<!-- CSS Custom -->
+
+	<link th:href="@{/css/style-produit.css}" rel="stylesheet">
+	<link th:href="@{/css/elegant-icons.css}" rel="stylesheet">
+	<!-- order online css -->
+	<link th:href="@{/css/order-online.css}" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+
+<body class="not-transparent-header style-2">
+
+
+<!-- start Container Wrapper -->
+<div class="container-wrapper">
+
+	<!-- start Header -->
+	<header id="header">
+		<!-- start Navbar (Header) -->
+		<nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function">
+
+			<div class="container">
+
+				<div class="logo-wrapper">
+					<div class="logo">
+						<a href="/"><img th:src="@{/images/logo-51x70.png}" alt="Logo" /></a>
+					</div>
+				</div>
+
+				<div id="navbar" class="navbar-nav-wrapper navbar-arrow">
+
+					<ul class="nav navbar-nav" id="responsive-menu">
+
+						<li>
+							<a href="/">Home</a>
+
+						</li>
+
+						<li>
+							<a href="">Restaurant</a>
+							<ul>
+								<th:block th:each="resto : ${restaurants}">
+									<li><a th:href="*{'/accueil/client'+resto.id}"><span  th:text="${resto.nomResto}"></span></a></li>
+								</th:block>
+							</ul>
+						</li>
+
+					</ul>
+
+				</div><!--/.nav-collapse -->
+
+				<div class="nav-mini-wrapper col-sm-4">
+					<ul class="nav-mini sign-in">
+						<li>
+							<a class="nav-link fl1" href="">
+								<i class="fa fa-shopping-cart" title="View Cart" style="color: red; font-size: 20px"></i>
+								<span class="label  shopping-cart" id="logoPanier"></span>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+
+			<div id="slicknav-mobile"></div>
+
+		</nav>
+		<!-- end Navbar (Header) -->
+	</header>
+	<!-- end Header -->
+
+
+
+	<!-- start Main Wrapper -->
+	<div class="main-wrapper scrollspy-container">
+
+		<div id="order-page-title" class="page-title-style2">
+
+			<div class="container inner-img">
+				<div class="order-top-section">
+					<div class="Page-title">
+
+						<div class="row single-restaurant-top-section">
+
+							<div class="col-md-8">
+								<div class="res-short-info">
+									<h2><span th:text="${resturant.nomResto}"></span></h2>
+									<ul class="list-unstyled">
+										<li>
+											<span class="glyphicon glyphicon-cutlery"></span>
+											Type de cuisine: <span th:text="${resturant.typeCuisine}"></span>
+										</li>
+										<li><span class="fa fa-lock"></span> Fourchette à partir de £15</li>
+										<div class="clearfix"></div>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="restaurant-opening-info">
+
+									<div class="res-rating-all">
+										<ul class="list-unstyled">
+											<li>
+												<div class="res-opening-time"><i class="glyphicon glyphicon-time"></i>  17:30 - 22:30 </div>
+											</li>
+											<li>
+												<div class="ui-res-rating">
+													<span class="glyphicon glyphicon-star" style="color: #E64D64;"></span>
+													<span class="glyphicon glyphicon-star" style="color: #E64D64;"></span>
+													<span class="glyphicon glyphicon-star" style="color: #E64D64;"></span>
+													<span class="glyphicon glyphicon-star" style="color: #CCCCCC;"></span>
+													<span class="glyphicon glyphicon-star" style="color: #CCCCCC;"></span>
+												</div>
+											</li>
+											<li>
+												<div class="ui-rating-text">
+													2 Note
+												</div>
+											</li>
+											<div class="clearfix"></div>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- start hero-header -->
+		<div class="breadcrumb-wrapper">
+
+			<div class="container">
+
+				<ol class="breadcrumb-list booking-step">
+					<li><a href="/">Home</a></li>
+					<li><span>Commande en ligne</span></li>
+				</ol>
+
+			</div>
+
+		</div>
+		<!-- end hero-header -->
+
+
+		<div class="section sm">
+
+			<!-- Content Start -->
+			<!-- Start order-online-->
+			<div id="order-online">
+				<div class="container">
+
+					<h3 ><i class="fa fa-tablet-rugged"></i> Table 1</h3>
+					<!-- Nested Row Starts -->
+					<div class="row col-md-12">
+						<div class="product-list col-md-8 col-xs-12">
+							<div class="row">
+								<div class="col-lg-4 col-sm-6" th:each="produit:${menu}">
+									<div class="product-item">
+										<div class="pi-pic">
+											<img th:src="*{'data:image/jpeg;base64,'+produit.image}" alt="">
+											<ul>
+												<li class="quick-view"><button type="button" name="ajout" class="ajout"  >+ Ajouter</button></li>
+											</ul>
+										</div>
+										<div class="pi-text">
+											<div class="catagory-name" th:text="${produit.categorie.nom}">catégorie</div>
+											<a href="#">
+												<span class="nom h5"  name="nom"   >[[${produit.nom}]]</span>
+											</a>
+											<div  class="pi-text">
+												<span class="product-price" name="prix"> [[${produit.prix}]] €</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Sidearea Starts -->
+						<div class="col-md-4 col-xs-12" >
+							<!-- Spacer Starts -->
+							<div class="spacer-1 medium hidden-lg hidden-md"></div>
+							<!-- Spacer Ends -->
+							<!-- Your Order Starts -->
+							<div class="side-block-order border-radius-4" >
+								<!-- Heading Starts -->
+								<h5 class="text-center"><i class="fa fa-shopping-cart"></i> Votre commande</h5>
+								<!-- Heading Ends -->
+								<!-- Order Content Starts -->
+								<div class="side-block-order-content">
+									<form action="/commande/paiement"  method="post" >
+									<!-- Order Item List Starts -->
+										<input type="hidden" id="montant2"  name="montant2">
+										<input type="hidden"  id="resto" name="resto" th:value="${resturant.email}">
+										<ul class="list-unstyled order-item-list" id="panier" >
+
+
+										</ul>
+
+									<!-- Order Item List Ends -->
+									<!-- Order Item Total Starts -->
+										<dl class="dl-horizontal order-item-total">
+											<dt class="text-bold">Montant</dt>
+											<dd class="text-bold text-spl-color text-right  mr-15" id="montant" style="color: orangered; font-size: large;">0</dd>
+										</dl>
+
+										<!-- Order Item Total Ends -->
+										<div class="cfo-checkoutarea">
+											<button type="submit" onclick="vider()"  class="btn btn-primary btn-block custom-checkout">Payer</button>
+										</div>
+									</form>
+								</div>
+								<!-- Order Content Ends -->
+							</div>
+							<!-- Your Order Ends -->
+						</div>
+						<!-- Sidearea Ends -->
+					</div>
+
+
+				</div>
+				<!--.container-->
+			</div>
+			<!--#order-online-->
+			<!--end order-online-->
+			<!-- Content End -->
+
+		</div>
+
+		<footer class="footer-wrapper-area">
+
+			<!-- start footer area -->
+			<div class="footer-area-content">
+
+
+				<div class="container">
+					<div class="footer-wrapper style-3">
+						<footer class="type-1">
+							<div class="footer-columns-entry">
+								<div class="row">
+									<div class="col-md-3 col-sm-3">
+										<h3 class="column-title">Cuisines de la maison</h3>
+										<ul class="column">
+											<th:block th:each="resto: ${restaurants}">
+												<li><a th:href="*{'/accueil/client'+resto.id}"><span th:text="${resto.typeCuisine}"></span></a></li>
+											</th:block>
+										</ul>
+										<div class="clear"></div>
+									</div>
+
+									<div class="col-md-3 col-sm-3">
+										<h3 class="column-title">Nos restaurants</h3>
+										<ul class="column">
+											<th:block th:each="resto: ${restaurants}">
+												<li><a th:href="*{'/accueil/client'+resto.id}"><span th:text="${resto.nomResto}"></span></a></li>
+											</th:block>
+										</ul>
+										<div class="clear"></div>
+									</div>
+
+									<div class="col-md-3 col-sm-3">
+										<h3 class="column-title">Click.Resto</h3>
+										<ul class="column">
+											<li><a href="/accueil/apropos">A propos de nous</a></li>
+											<li><a href="/accueil/policy"> Politique de confidentialité</a></li>
+
+										</ul>
+										<div class="clear"></div>
+									</div>
+								</div>
+							</div>
+						</footer>
+					</div>
+				</div>
+
+
+			</div>
+			<!-- footer area end -->
+
+			<div class="bottom-footer">
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-sm-4 col-md-4">
+
+							<p class="copy-right">&#169; Copyright 2022</p>
+
+						</div>
+
+						<div class="col-sm-4 col-md-4">
+
+							<ul class="bottom-footer-menu">
+
+							</ul>
+
+						</div>
+
+						<div class="col-sm-4 col-md-4">
+							<ul class="bottom-footer-menu for-social">
+								<li><a href="#"><i class="ri ri-twitter" data-toggle="tooltip" data-placement="top" title="twitter"></i></a></li>
+								<li><a href="#"><i class="ri ri-facebook" data-toggle="tooltip" data-placement="top" title="facebook"></i></a></li>
+								<li><a href="#"><i class="ri ri-google-plus" data-toggle="tooltip" data-placement="top" title="google plus"></i></a></li>
+								<li><a href="#"><i class="ri ri-youtube-play" data-toggle="tooltip" data-placement="top" title="youtube"></i></a></li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</footer>
+		<!-- end footer -->
+
+	</div>
+	<!-- end Main Wrapper -->
+
+
+	<!-- Start Pages Title  -->
+
+
+
+
+</div> <!-- / .wrapper -->
+<!-- end Container Wrapper -->
+
+
+<!-- start Back To Top -->
+<div id="back-to-top">
+	<a href="#"><i class="ion-ios-arrow-up"></i></a>
+</div>
+<!-- end Back To Top -->
+
+
+<!-- JS -->
+<script th:replace="~{fragment/outil::foot}"/>
+
+<script th:src="@{/js/jquery.easing.min.js}"></script>
+<script th:src="@{/js/jquery.sticky.js}"></script>
+
+<script th:src="@{/js/plugins/datepicker/bootstrap-datepicker.js}"></script>
+<script th:src="@{/js/plugins/magnific-popup/jquery.magnific-popup.min.js}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+
+<script th:src="@{/js/panier.js}"></script>
+
+<script type="text/javascript">
+	//MAGNIFIC POPUP
+	$(".gallery-grid").magnificPopup({
+		delegate: 'a.zoom',
+		type: 'image',
+		gallery: {
+			enabled: true
+		}
+	});
+
+	// Date Picker
+	$(".datepickerInput").datepicker({
+		format: "dd/mm/yyyy"
+	});
+
+
+	// GOOGLE MAP
+	$(".contact-page-map").height(440);
+	function initialize($) {
+		var mapOptions = {
+			zoom: 8,
+			center: new google.maps.LatLng(17.421306, 78.457553),
+			disableDefaultUI: true
+		};
+		var map = new google.maps.Map(document.querySelector('.map, .contact-page-map'), mapOptions);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+</body>
+
+
+
+
+</html>

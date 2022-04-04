@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head >
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Title Of Site -->
+	<title>Thefoody - Order Online Portal Responsive HTML Template</title>
+	<meta name="description" content="TheFoody is a food ordering platform which brings restaurants and food lovers together. Food ordering online is easier than any other platforms.">
+	<meta name="keywords" content="food, order online, restaurant, reservation, book a table, foodies, cafe, recipes, menu, dishes, chefs and cooking experts ">
+	<meta name="author" content="iglyphic">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link  th:replace="~{fragment/outil::css}"/>
+</head>
+
+
+<body class="not-transparent-header">
+
+
+	<!-- start Container Wrapper -->
+	<div class="container-wrapper">
+
+		<!-- start Header -->
+		<header id="header">
+			<!-- start Navbar (Header) -->
+			<nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function">
+
+				<div class="container">
+
+					<div class="logo-wrapper">
+						<div class="logo">
+							<a href="/"><img th:src="@{/images/logo-51x70.png}" alt="Logo" /></a>
+						</div>
+					</div>
+
+					<div id="navbar" class="navbar-nav-wrapper navbar-arrow">
+
+						<ul class="nav navbar-nav" id="responsive-menu">
+							<li>
+								<a href="/">Nos produits</a>
+							</li>
+
+							<li>
+								<a href="/restaurant/register">Devenir partenaire</a>
+							</li>
+							<li>
+								<a href="">Information</a>
+								<ul>
+									<li><a href="/accueil/how">Guide</a></li>
+									<li><a href="/accueil/apropos">A propos de nous</a></li>
+									<li><a href="/accueil/contact">Contact</a></li>
+									<li><a href="/accueil/policy">Politique de confidentialité</a></li>
+								</ul>
+							</li>
+
+						</ul>
+
+					</div><!--/.nav-collapse -->
+
+					<div class="nav-mini-wrapper">
+						<ul class="nav-mini sign-in">
+							<li><a href="/restaurant/login"><font size="3">S'identifier</font></a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div id="slicknav-mobile"></div>
+
+			</nav>
+			<!-- end Navbar (Header) -->
+		</header>
+		<!-- end Header -->
+
+		<!-- start Main Wrapper -->
+		<div class="main-wrapper scrollspy-container">
+		
+			<!-- start hero-header -->
+			<div class="breadcrumb-wrapper">
+			
+				<div class="container">
+				
+					<ol class="breadcrumb-list booking-step">
+						<li><a href="/">Home</a></li>
+						<li><span>Guide d'utilisation</span></li>
+					</ol>
+					
+				</div>
+				
+			</div>
+			<!-- end hero-header -->
+			
+			<div class="section sm">
+			
+				<div class="container">
+				
+					<div class="row">
+					
+						<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+						
+							<div class="section-title bb mb-30">
+						
+								<h2>Guide d'utilisation</h2>
+								
+								
+							</div>
+							
+						</div>
+						
+					</div>
+					
+					<div class="how-it-work-wrapper">
+					
+						<div class="how-it-work-box">
+						
+							<div class="GridLex-gap-40">
+							
+								<div class="GridLex-grid-middle">
+								
+									<div class="GridLex-col-7_sm-7_xs-12">
+										
+										<div class="image">
+											<img th:src="@{/images/how-it-work/01.png}" alt="Image" />
+										</div>
+									
+									</div>
+									
+									<div class="GridLex-col-5_sm-5_xs-12">
+									
+										<div class="content">
+									
+											<h3 class="heading">Recherchez le restaurant de votre choix.</h3>
+											<ul class="list-with-icon alt mt-20 mb-25">
+
+												<li><i class="text-primary ion-android-checkmark-circle"></i> TheFoody is an online portal.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Ordering Food & Delivery from restaurants of choice.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> able booking & Restaurants.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Party Halls online booking</li>
+												
+											</ul>
+										
+										</div>
+										
+									</div>
+									
+								</div>
+							
+							</div>
+
+						</div>
+
+						<div class="how-it-work-box">
+						
+							<div class="GridLex-gap-40">
+							
+								<div class="GridLex-grid-middle">
+
+									<div class="GridLex-col-5_sm-5_xs-12">
+									
+										<div class="content">
+									
+											<h3>Restaurant list where you can search your desired restaurant</h3>
+											
+											<p class="lead text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+											
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi est, pulvinar eu gravida eget, imperdiet id nunc. Sed a lorem turpis. Ut vestibulum leo vel orci tincidunt condimentum. Donec tincidunt, nibh eu laoreet dapibus, dolor ligula convallis augue, quis convallis nibh tellus quis nibh.</p>
+											
+											<ul class="list-with-icon alt mt-20 mb-25">
+									
+												<li><i class="text-primary ion-android-checkmark-circle"></i> TheFoody is an online portal.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Ordering Food & Delivery from restaurants of choice.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> able booking & Restaurants.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Party Halls online booking</li>
+												
+											</ul>
+										
+										</div>
+										
+									</div>
+									
+									<div class="GridLex-col-7_sm-7_xs-12">
+										
+										<div class="image">
+											<img src="images/how-it-work/02.png" alt="Image" />
+										</div>
+									
+									</div>
+									
+								</div>
+							
+							</div>
+
+						</div>
+						
+						<div class="how-it-work-box">
+						
+							<div class="GridLex-gap-40">
+							
+								<div class="GridLex-grid-middle">
+								
+									<div class="GridLex-col-7_sm-7_xs-12">
+										
+										<div class="image">
+											<img src="images/how-it-work/03.png" alt="Image" />
+										</div>
+									
+									</div>
+									
+									<div class="GridLex-col-5_sm-5_xs-12">
+									
+										<div class="content">
+									
+											<h3 class="heading">Order online from every single dish category</h3>
+											
+											<p class="lead text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+											
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi est, pulvinar eu gravida eget, imperdiet id nunc. Sed a lorem turpis. Ut vestibulum leo vel orci tincidunt condimentum. Donec tincidunt, nibh eu laoreet dapibus, dolor ligula convallis augue, quis convallis nibh tellus quis nibh.</p>
+										
+											<ul class="list-with-icon alt mt-20 mb-25">
+
+												<li><i class="text-primary ion-android-checkmark-circle"></i> TheFoody is an online portal.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Ordering Food & Delivery from restaurants of choice.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> able booking & Restaurants.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Party Halls online booking</li>
+												
+											</ul>
+											
+											<a href="#" class="btn btn-primary">Learn More</a>
+											
+										</div>
+										
+									</div>
+									
+								</div>
+							
+							</div>
+
+						</div>
+
+						<div class="how-it-work-box">
+						
+							<div class="GridLex-gap-40">
+							
+								<div class="GridLex-grid-middle">
+
+									<div class="GridLex-col-5_sm-5_xs-12">
+									
+										<div class="content">
+									
+											<h3>Order process where you can set payment getaway also delivery address </h3>
+											
+											<p class="lead text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+											
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi est, pulvinar eu gravida eget, imperdiet id nunc. Sed a lorem turpis. Ut vestibulum leo vel orci tincidunt condimentum. Donec tincidunt, nibh eu laoreet dapibus, dolor ligula convallis augue, quis convallis nibh tellus quis nibh.</p>
+										
+											<ul class="list-with-icon alt mt-20 mb-25">
+
+												<li><i class="text-primary ion-android-checkmark-circle"></i> TheFoody is an online portal.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Ordering Food & Delivery from restaurants of choice.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> able booking & Restaurants.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Party Halls online booking</li>
+												
+											</ul>
+											
+										</div>
+										
+									</div>
+									
+									<div class="GridLex-col-7_sm-7_xs-12">
+										
+										<div class="image">
+											<img src="images/how-it-work/04.png" alt="Image" />
+										</div>
+									
+									</div>
+									
+								</div>
+							
+							</div>
+
+						</div>
+						
+						<div class="how-it-work-box">
+						
+							<div class="GridLex-gap-40">
+							
+								<div class="GridLex-grid-middle">
+								
+									<div class="GridLex-col-7_sm-7_xs-12">
+										
+										<div class="image">
+											<img src="images/how-it-work/05.png" alt="Image" />
+										</div>
+									
+									</div>
+									
+									<div class="GridLex-col-5_sm-5_xs-12">
+									
+										<div class="content">
+									
+											<h3 class="heading">Reserve a restaurant table </h3>
+											
+											<p class="lead text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+											
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi est, pulvinar eu gravida eget, imperdiet id nunc. Sed a lorem turpis. Ut vestibulum leo vel orci tincidunt condimentum. Donec tincidunt, nibh eu laoreet dapibus, dolor ligula convallis augue, quis convallis nibh tellus quis nibh.</p>
+										
+											<ul class="list-with-icon alt mt-20 mb-25">
+
+												<li><i class="text-primary ion-android-checkmark-circle"></i> TheFoody is an online portal.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Ordering Food & Delivery from restaurants of choice.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> able booking & Restaurants.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Party Halls online booking</li>
+												
+											</ul>
+											
+										</div>
+										
+									</div>
+									
+								</div>
+							
+							</div>
+
+						</div>
+
+						<div class="how-it-work-box">
+						
+							<div class="GridLex-gap-40">
+							
+								<div class="GridLex-grid-middle">
+
+									<div class="GridLex-col-5_sm-5_xs-12">
+									
+										<div class="content">
+									
+											<h3>You can search using only cuisine</h3>
+											
+											<p class="lead text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+											
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mi est, pulvinar eu gravida eget, imperdiet id nunc. Sed a lorem turpis. Ut vestibulum leo vel orci tincidunt condimentum. Donec tincidunt, nibh eu laoreet dapibus, dolor ligula convallis augue, quis convallis nibh tellus quis nibh.</p>
+
+											<ul class="list-with-icon alt mt-20 mb-25">
+
+												<li><i class="text-primary ion-android-checkmark-circle"></i> TheFoody is an online portal.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Ordering Food & Delivery from restaurants of choice.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> able booking & Restaurants.</li>
+												<li><i class="text-primary ion-android-checkmark-circle"></i> Party Halls online booking</li>
+												
+											</ul>
+											
+											<a href="#" class="btn btn-primary">Learn More</a>
+											
+										</div>
+										
+									</div>
+									
+									<div class="GridLex-col-7_sm-7_xs-12">
+										
+										<div class="image">
+											<img th:src="@{/images/how-it-work/06.png}" alt="Image" />
+										</div>
+									
+									</div>
+									
+								</div>
+							
+							</div>
+
+						</div>
+						
+					</div>
+					
+					<div class="newsletter-wrapper-02 mt-70 mb-10">
+									
+						<div class="GridLex-gap-10-wrappper">
+						
+							<div class="GridLex-grid-middle">
+							
+								<div class="GridLex-col-6_sm-6_xs-12">
+									<h5 class="">Obtenez une nouvelle mise à jour pour <span class="text-capitalize">Click.Resto</span> par e-mail</h5>
+									<p class="font-italic font13">*** Ne vous inquiétez pas, nous ne vous spammerons pas </p>
+								</div>
+								
+								<div class="GridLex-col-6_sm-6_xs-12">
+									
+									<div class="newsletter-02">
+							
+										<div class="form-group">
+											<input class="form-control" placeholder="enter your email " />
+											<button class="btn btn-primary">s'abonner</button>
+										</div>
+										
+									</div>
+									
+								</div>
+								
+							</div>
+							
+						</div>
+
+					</div>
+					
+				</div>
+				
+			</div>
+
+			<!-- start footer -->
+			<footer class="footer-wrapper-area">
+
+				<!-- start footer area -->
+				
+					<!-- END: Newsletter -->
+
+					<div class="container">
+						<div class="footer-wrapper style-3">
+							<footer class="type-1">
+								<div class="footer-columns-entry">
+									<div class="row">
+										<div class="col-md-4 col-sm-4">
+											<h3 class="column-title">Cuisines populaires</h3>
+											<ul class="column">
+												<li><a href="all-cuisines.html">Tout type de cuisine</a></li>
+												<li><a href="#">Italien</a></li>
+												<li><a href="#">Chinois</a></li>
+												<li><a href="#">Dessert turc</a></li>
+												<li><a href="#">Fruits de mer européens</a></li>
+												<li><a href="#">Moyen orient français</a></li>
+											</ul>
+											<div class="clear"></div>
+										</div>
+
+										<div class="col-md-4 col-sm-4">
+											<h3 class="column-title">Restaurants</h3>
+											<ul class="column">
+												<li><a href="restaurant-search.html">Recherche restaurant</a></li>
+												<li><a href="#">Par mot clé</a></li>
+												<li><a href="#">Par localité</a></li>
+												<li><a href="#">Par code postal</a></li>
+												<li><a href="#"> Par categorie</a></li>
+												<li><a href="#">Par region</a></li>
+												<li><a href="#">Par ville</a></li>
+											</ul>
+											<div class="clear"></div>
+										</div>
+
+										<div class="col-md-4 col-sm-4">
+											<h3 class="column-title">Click.Resto</h3>
+											<ul class="column">
+												<li><a href="about-us.html">A propos de nous</a></li>
+												<li><a href="blog.html">Nouvelles</a></li>
+												<li><a href="#">Conditions générales</a></li>
+												<li><a href="privacy-policy.html"> Politique de confidentialité</a></li>
+											</ul>
+											<div class="clear"></div>
+										</div>
+									</div>
+								</div>
+							</footer>
+						</div>
+					</div>
+
+
+
+				<!-- footer area end -->
+
+				<div class="bottom-footer">
+
+					<div class="container">
+
+						<div class="row">
+
+							<div class="col-sm-6 col-md-6">
+
+								<p class="copy-right">&#169; Copyright 2022 CDAN-02</p>
+
+							</div>
+
+
+							<div class="col-sm-6 col-md-6">
+								<ul class="bottom-footer-menu for-social">
+									<li><a href="#"><i class="ri ri-twitter" data-toggle="tooltip" data-placement="top" title="twitter"></i></a></li>
+									<li><a href="#"><i class="ri ri-facebook" data-toggle="tooltip" data-placement="top" title="facebook"></i></a></li>
+									<li><a href="#"><i class="ri ri-google-plus" data-toggle="tooltip" data-placement="top" title="google plus"></i></a></li>
+									<li><a href="#"><i class="ri ri-youtube-play" data-toggle="tooltip" data-placement="top" title="youtube"></i></a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</footer>
+			<!-- end footer -->
+			
+		</div>
+		<!-- end Main Wrapper -->
+
+	</div> <!-- / .wrapper -->
+	<!-- end Container Wrapper -->
+ 
+ 
+<!-- start Back To Top -->
+<div id="back-to-top">
+   <a href="#"><i class="ion-ios-arrow-up"></i></a>
+</div>
+<!-- end Back To Top -->
+
+
+<!-- JS -->
+	<script th:replace="~{fragment/outil::foot}"/>
+
+
+</body>
+
+
+
+</html>

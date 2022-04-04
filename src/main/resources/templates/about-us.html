@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+
+
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title Of Site -->
+	<title>Thefoody - Order Online Portal Responsive HTML Template</title>
+	<meta name="description" content="TheFoody is a food ordering platform which brings restaurants and food lovers together. Food ordering online is easier than any other platforms.">
+	<meta name="keywords" content="food, order online, restaurant, reservation, book a table, foodies, cafe, recipes, menu, dishes, chefs and cooking experts ">
+	<meta name="author" content="iglyphic">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link  th:replace="~{fragment/outil::css}"/>
+	
+</head>
+
+
+<body class="not-transparent-header">
+
+	<!-- start Container Wrapper -->
+	<div class="container-wrapper">
+
+		<!-- start Header -->
+		<header id="header">
+			<!-- start Navbar (Header) -->
+			<nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function">
+
+				<div class="container">
+
+					<div class="logo-wrapper">
+						<div class="logo">
+							<a href="/"><img th:src="@{/images/logo-51x70.png}" alt="Logo" /></a>
+						</div>
+					</div>
+
+					<div id="navbar" class="navbar-nav-wrapper navbar-arrow">
+
+						<ul class="nav navbar-nav" id="responsive-menu">
+							<li>
+								<a href="/">Accueil</a>
+
+							</li>
+
+							<li>
+								<a href="/restaurant/register">Devenir partenaire</a>
+							</li>
+							<li>
+								<a href="">Information</a>
+								<ul>
+									<li><a href="/accueil/how">Guide</a></li>
+									<li><a href="/accueil/apropos">A propos de nous</a></li>
+									<li><a href="/accueil/contact">Contact</a></li>
+									<li><a href="/accueil/policy">Politique de confidentialité</a></li>
+								</ul>
+							</li>
+
+						</ul>
+
+					</div><!--/.nav-collapse -->
+
+					<div class="nav-mini-wrapper">
+						<ul class="nav-mini sign-in">
+							<li><a href="/restaurant/login"><font size="3">S'identifier</font></a></li>
+							
+						</ul>
+					</div>
+
+				</div>
+
+				<div id="slicknav-mobile"></div>
+
+			</nav>
+			<!-- end Navbar (Header) -->
+		</header>
+		<!-- end Header -->
+
+		<!-- start Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- start hero-header -->
+			<div class="breadcrumb-wrapper">
+			
+				<div class="container">
+				
+					<ol class="breadcrumb-list">
+						<li><a href="/">Home</a></li>
+						<li><span>A propos de nous</span></li>
+					</ol>
+					
+				</div>
+				
+			</div>
+			<!-- end hero-header -->
+			
+			<div class="section pb-60">
+			
+				<div class="container">
+				
+					<div class="section-title mb-40">
+							
+						<h2 class=" text-left">A propos de nous</h2>
+						
+					</div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-lg-3 col-md-3">
+							<div class="welcome_wrapper text-left" >
+								<div class="number">01.</div>
+								<h5>La Pateforme</h5>
+								<p>C'est un portail en ligne qui permet de commander des plats cuisinés et des petits plaisirs gourmands pour faire pétiller votre journée.
+									En rendant les services des restaurateurs disponibles en ligne, ils profitent des opportunités offertes par le web et gagneront des clients qui souhaitent déguster des plats dans le confort de leur maison.
+								</p>
+								
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-lg-3 col-md-3">
+							<div class="welcome_wrapper text-left">
+								<div class="number">02.</div>
+								<h5>Notre Histoire</h5>
+								<p>Notre projet de mettre une plateforme de restaurants en ligne entre dans le cadre de la validation de nos acquis au terme de la formation en conception
+									et développement d'applications numériques au sein de Inclusiv Academy durant les six mois d'apprentissage. C'est également un défi que toute l'équipe formée par le
+									personnel pédagogique et les stagiaires voulait relever en réalisant un projet innovant et prometteur en une période de temps très court.
+								</p>
+								
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-lg-3 col-md-3">
+							<div class="welcome_wrapper text-left">
+								<div class="number">03.</div>
+								<h5>Notre Mission</h5>
+								<p>Les restaurants qui souhaitent augmenter leurs ventes et se démarquer de leurs compétiteurs peuvent trouver chez nous de nouvelles façons de vendre en ligne.
+									L'une des méthodes les plus efficaces aujourd'hui consiste à utiliser un système de commande en ligne comme le notre. 
+									Cela permet aux restaurants partenaires de développer leur clientèle, d'augmenter leurs revenus et de montrer à leurs clients qu'ils sont des entreprises modernes qui visent à satisfaire leurs besoins. 
+									</p>
+								
+							</div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-lg-3 col-md-3">
+							<div class="welcome_wrapper text-left">
+								<div class="number">04.</div>
+								<h5>Nos Valeurs</h5>
+								<p>L'agilité, la simplicité et l'éfficacité.</p>
+								
+							</div>
+						</div>
+					</div>a	
+
+				</div>
+			
+			</div>
+
+			<div class="image-bg-wrapper counting-wrapper" style="background-image:url('/images/nous-1920x1280.jpg')">
+				<img th:src="@{/images/nous-1920x1280.jpg}" class="hidden">
+				<div class="image-bg-wrapper counting-wrapper" style="background-image:url('/images/nous-1920x1280.jpg');">
+					<div class="container mt-15">
+					
+						<div class="row">
+						
+							<div class="col-md-10 col-md-offset-1">
+							
+								<div class="row">
+							
+									<div class="col-sm-6 col-md-3">
+									
+										<div class="counting-item">
+										
+											<div class="counting-number h1"><span class="counter" data-decimal-delimiter="," data-thousand-delimiter="," data-value="116" ></span></div>
+											
+											Gourmets
+											
+										</div>
+									
+									</div>
+									
+									<div class="col-sm-6 col-md-3">
+									
+										<div class="counting-item">
+										
+											<div class="counting-number h1"><span class="counter" data-decimal-delimiter="," data-thousand-delimiter="," data-value="7" ></span></div>
+											
+											Equipe
+											
+										</div>
+									
+									</div>
+	
+									<div class="col-sm-6 col-md-3">
+									
+										<div class="counting-item">
+										
+											<div class="counting-number h1"><span class="counter" data-decimal-delimiter="," data-thousand-delimiter="," data-value="10" ></span></div>
+											
+											Pays
+											
+										</div>
+									
+									</div>
+									
+									<div class="col-sm-6 col-md-3">
+									
+										<div class="counting-item">
+										
+											<div class="counting-number h1"><span class="counter" data-decimal-delimiter="," data-thousand-delimiter="," data-value="30" ></span></div>
+											
+											Lieux
+											
+										</div>
+									
+									</div>
+									
+								</div>
+							
+							</div>
+							
+						</div>
+					
+				</div>
+				
+			</div>
+
+			<div class="section pb-50">
+			
+				<div class="container mt-10">
+					
+					<div class="row">
+						<div class="col-sm-4 mb-30">
+							<img th:src="@{/images/logo-200x273.png}" alt="Logo" /></a>
+						</div>
+						
+						<div class="col-sm-4 ">
+							<div class="featured-icon-05-wrapper pull-left">
+								<div class="row">
+										<div class="feature margin-top-zero">
+											<i class="icon icon-Time"></i>
+											<h5>Toujours disponible</h5>
+										</div>
+										<div class="feature">
+											<i class="icon icon-Shield"></i>
+											<h5>Personnel qualifié</h5>
+										</div>
+										<div class="feature">
+											<i class="fa fa-diamond"></i>
+											<h5>Experience en agilité</h5>
+										</div>
+										<div class="feature no-margin-bottom">
+											<i class="icon icon-Star"></i>
+											<h5>Amélioration continue</h5>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 ">
+							<ul class="list-with-icon alt mt-20 mb-25">
+								<li><i class="text-primary ion-android-checkmark-circle"></i><h5> Click.Resto est un portail en ligne.</h5></li>
+								<li><i class="text-primary ion-android-checkmark-circle"></i><h5> Commande de nourriture et livraison dans les restaurants de votre choix.</h5></li>
+								<li><i class="text-primary ion-android-checkmark-circle"></i><h5> Réservation de tables et restaurants.</h5></li>
+								<li><i class="text-primary ion-android-checkmark-circle"></i><h5>Offres et remises</h5></li>
+								<li><i class="text-primary ion-android-checkmark-circle"></i><h5>Réservation en ligne des salles de fête</h5></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			
+			</div>
+			
+			
+
+			<div class="section pb-50 bg-light">
+			
+				<div class="container">
+					
+					<div class="row">
+					
+						<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+						
+							<div class="section-title">
+								<h2>Pourquoi nous avonçons rapidement?</h2>
+								<p><h3>La simplicité et l'efficacité!</h3></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+
+			<div class="section padding-0">
+
+				<!-- Download App Start -->
+				
+				<!--Download App End -->
+				
+			</div>
+
+			<!-- start footer -->
+			<footer class="footer-wrapper-area">
+
+				<!-- start footer area -->
+				<div class="footer-area-content">
+					<!-- Newsletter -->
+					
+					<!-- END: Newsletter -->
+
+					<div class="container">
+						<div class="footer-wrapper style-3">
+							<footer class="type-1">
+								<div class="footer-columns-entry">
+									<div class="row">
+										<div class="col-md-3 col-sm-3">
+											<h3 class="column-title">Cuisines de la maison</h3>
+											<ul class="column">
+												<th:block th:each="restaurant: ${restaurants}">
+													<li><a th:href="*{'/accueil/client'+restaurant.id}"><span  th:text="${restaurant.typeCuisine}"></span></a></li>
+												</th:block>
+											</ul>
+											<div class="clear"></div>
+										</div>
+
+										<div class="col-md-3 col-sm-3">
+											<h3 class="column-title">Nos restaurants</h3>
+											<ul class="column">
+												<th:block th:each="restaurant: ${restaurants}">
+													<li><a th:href="*{'/accueil/client'+restaurant.id}"><span  th:text="${restaurant.nomResto}"></span></a></li>
+												</th:block>
+											</ul>
+											<div class="clear"></div>
+										</div>
+
+										<div class="col-md-3 col-sm-3">
+											<h3 class="column-title">Thefoody</h3>
+											<ul class="column">
+												<li><a href="/accueil/apropos">A propos de nous</a></li>
+												<li><a href="/accueil/policy"> Politique de confidentialité</a></li>
+												<li><a href="/restaurant/register">Devenir partenaire</a></li>
+
+											</ul>
+											<div class="clear"></div>
+										</div>
+									</div>
+								</div>
+							</footer>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- footer area end -->
+
+				<div class="bottom-footer">
+
+					<div class="container">
+
+						<div class="row">
+
+							<div class="col-sm-6 col-md-6">
+
+								<p class="copy-right">&#169; Copyright 2022 CDAN-02</p>
+
+							</div>
+							<div class="col-sm-4 col-md-4">
+								<ul class="bottom-footer-menu for-social">
+									<li><a href="#"><i class="ri ri-twitter" data-toggle="tooltip" data-placement="top" title="twitter"></i></a></li>
+									<li><a href="#"><i class="ri ri-facebook" data-toggle="tooltip" data-placement="top" title="facebook"></i></a></li>
+									<li><a href="#"><i class="ri ri-google-plus" data-toggle="tooltip" data-placement="top" title="google plus"></i></a></li>
+									<li><a href="#"><i class="ri ri-youtube-play" data-toggle="tooltip" data-placement="top" title="youtube"></i></a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</footer>
+			<!-- end footer -->
+			
+		</div>
+		<!-- end Main Wrapper -->
+
+	</div> <!-- / .wrapper -->
+	<!-- end Container Wrapper -->
+ 
+ 
+<!-- start Back To Top -->
+<div id="back-to-top">
+   <a href="#"><i class="ion-ios-arrow-up"></i></a>
+</div>
+<!-- end Back To Top -->
+
+
+<!-- JS -->
+	<script th:replace="~{fragment/outil::foot}"/>
+
+</body>
+
+
+</html>

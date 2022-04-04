@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title Of Site -->
+	<title>Thefoody - Order Online Portal Responsive HTML Template</title>
+	<meta name="description" content="TheFoody is a food ordering platform which brings restaurants and food lovers together. Food ordering online is easier than any other platforms.">
+	<meta name="keywords" content="food, order online, restaurant, reservation, book a table, foodies, cafe, recipes, menu, dishes, chefs and cooking experts ">
+	<meta name="author" content="iglyphic">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link  th:replace="~{fragment/outil::css}"/>
+	
+</head>
+
+
+<body class="not-transparent-header">
+
+	<!-- start Container Wrapper -->
+	<div class="container-wrapper">
+
+		<!-- start Header -->
+		<header id="header">
+			<!-- start Navbar (Header) -->
+			<nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function">
+
+				<div class="container">
+
+					<div class="logo-wrapper">
+						<div class="logo">
+							<a href="index.html"><img th:src="@{/images/logo-51x70.png}" alt="Logo" /></a>
+						</div>
+					</div>
+
+					<div id="navbar" class="navbar-nav-wrapper navbar-arrow">
+
+						<ul class="nav navbar-nav" id="responsive-menu">
+							<li>
+								<a href="index.html">Nos produits</a>
+								<ul>
+									<li><a href="/accueil/client/1">Commander</a></li>
+									<li><a href="all-cuisines.html">Catégorie</a></li>
+								</ul>
+							</li>
+
+							<li>
+								<a href="/restaurant/register">Devenir partenaire</a>
+							</li>
+
+
+							<li>
+								<a href="">Information</a>
+								<ul>
+									<li><a href="/accueil/how">Guide</a></li>
+									<li><a href="/accueil/apropos">A propos de nous</a></li>
+									<li><a href="/accueil/contact">Contact</a></li>
+									<li><a href="/accueil/policy">Politique de confidentialité</a></li>
+								</ul>
+							</li>
+
+						</ul>
+
+					</div><!--/.nav-collapse -->
+
+					<div class="nav-mini-wrapper">
+						<ul class="nav-mini sign-in">
+							<li><a href="/restaurant/login"><font size="3">S'identifier</font></a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div id="slicknav-mobile"></div>
+
+			</nav>
+			<!-- end Navbar (Header) -->
+		</header>
+		<!-- end Header -->
+
+		<!-- start Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- start hero-header -->
+			<div class="breadcrumb-wrapper">
+			
+				<div class="container">
+				
+					<ol class="breadcrumb-list">
+						<li><a href="/">Home</a></li>
+						<li><span>Contactez-nous</span></li>
+					</ol>
+					
+				</div>
+				
+			</div>
+			<!-- end hero-header -->
+			<div class="section sm pb-20">
+
+				<div class="container">
+
+					<div class="row">
+
+						<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+
+							<div class="section-title">
+
+								<h2>contactez-nous pour obtenir de l'aide</h2>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="row mb-40 contact-info">
+						<div class="col-sm-4">
+							<div class="icon icon-default" data-icon="G"></div>
+							<h4>Bureau Antananarivo</h4><address><p>Adresse:  Faravohitra</p></address></div>
+						<div class="col-sm-4">
+							<div class="icon icon-default" data-icon="G"></div>
+							<h4>Télephone:</h4><p> 034 71 646 20</p><p>Nous travaillons de 8:00 AM à 5:00 PM (UTC+02:00).</p></div>
+						<div class="col-sm-4">
+							<div class="icon icon-default" data-icon="G"></div>
+							<h4>Site web:</h4><p>http://www.inclusiv.mg</p></div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="contact-map">
+
+			<div id="map" data-lat="-18.90883908099211" data-lon="47.529280492652184" style="width: 100%; height: 500px;"></div>
+
+			<div class="infobox-wrapper shorter-infobox contact-infobox">
+				<div id="infobox">
+					<div class="infobox-address">
+						<h6>Nous sommes là</h6>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container">
+			<div class="row mt-50 mb-50">
+
+				<div class="col-sm-12 col-md-12 ">
+
+					<form class="contact-form-wrapper" data-toggle="validator">
+
+						<div class="row">
+
+							<div class="col-sm-6">
+
+								<div class="form-group">
+									<label for="inputName">Votre nom<span class="font10 text-danger">(required)</span></label>
+									<input id="inputName" type="text" class="form-control" data-error="Votre nom est requis" required>
+									<div class="help-block with-errors"></div>
+								</div>
+
+							</div>
+
+							<div class="col-sm-6">
+
+								<div class="form-group">
+									<label for="inputEmail">Votre e-mail <span class="font10 text-danger">(required)</span></label>
+									<input id="inputEmail" type="email" class="form-control" data-error="Votre adresse e-mail est obligatoire et doit être une adresse e-mail valide." required>
+									<div class="help-block with-errors"></div>
+								</div>
+
+							</div>
+
+							<div class="col-sm-12">
+
+								<div class="form-group">
+									<label>Objet</label>
+									<input type="text" class="form-control" />
+								</div>
+
+							</div>
+
+							<div class="col-sm-12">
+
+								<div class="form-group">
+									<label for="inputMessage">Message <span class="font10 text-danger">(required)</span></label>
+									<textarea id="inputMessage" class="form-control" rows="8" data-minlength="50" data-error="Votre message est obligatoire et ne doit pas comporter moins de 50 caractères." required></textarea>
+									<div class="help-block with-errors"></div>
+								</div>
+
+							</div>
+
+							<div class="col-sm-12 text-right">
+								<input type="button" class="btn btn-success" id="btnShowMsg" value="Envoyer" onClick="showMessage()" />
+							</div>
+
+						</div>
+
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<!-- start footer -->
+			<footer class="footer-wrapper-area">
+
+				<!-- start footer area -->
+				<div class="footer-area-content">
+					<!-- Newsletter -->
+					
+					<!-- END: Newsletter -->
+
+					<div class="container">
+						<div class="footer-wrapper style-3">
+							<footer class="type-1">
+								<div class="footer-columns-entry">
+									<div class="row">
+										<div class="col-md-4 col-sm-4">
+											<h3 class="column-title">Cuisines populaires</h3>
+											<ul class="column">
+												<li><a href="/accueil/cuisines">Tout type de cuisine</a></li>
+												<th:block  th:each="restaurant:${restaurants}">
+													<li><a th:href="*{'/accueil/client'+restaurant.id}"><span  th:text="${restaurant.typeCuisine}"></span></a></li>
+												</th:block>
+											</ul>
+											<div class="clear"></div>
+										</div>
+
+										<div class="col-md-4 col-sm-4">
+											<h3 class="column-title">Restaurants</h3>
+											<ul class="column">
+												<th:block  th:each="restaurant:${restaurants}">
+													<li><a th:href="*{'/accueil/client'+restaurant.id}"><span  th:text="${restaurant.nomResto}"></span></a></li>
+												</th:block>
+											</ul>
+											<div class="clear"></div>
+										</div>
+
+										<div class="col-md-4 col-sm-4">
+											<h3 class="column-title">Click.Resto</h3>
+											<ul class="column">
+												<li><a href="about-us.html">A propos de nous</a></li>
+												<li><a href="blog.html">Nouvelles</a></li>
+												<li><a href="#">Conditions générales</a></li>
+												<li><a href="privacy-policy.html"> Politique de confidentialité</a></li>
+											</ul>
+											<div class="clear"></div>
+										</div>
+									</div>
+								</div>
+							</footer>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- footer area end -->
+
+				<div class="bottom-footer">
+
+					<div class="container">
+
+						<div class="row">
+
+							<div class="col-sm-6 col-md-6">
+
+								<p class="copy-right">&#169; Copyright 2022 CDAN-02</p>
+
+							</div>
+							<div class="col-sm-6 col-md-6">
+								<ul class="bottom-footer-menu for-social">
+									<li><a href="#"><i class="ri ri-twitter" data-toggle="tooltip" data-placement="top" title="twitter"></i></a></li>
+									<li><a href="#"><i class="ri ri-facebook" data-toggle="tooltip" data-placement="top" title="facebook"></i></a></li>
+									<li><a href="#"><i class="ri ri-google-plus" data-toggle="tooltip" data-placement="top" title="google plus"></i></a></li>
+									<li><a href="#"><i class="ri ri-youtube-play" data-toggle="tooltip" data-placement="top" title="youtube"></i></a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</footer>
+			<!-- end footer -->
+			
+		</div>
+		<!-- end Main Wrapper -->
+
+	</div> <!-- / .wrapper -->
+	<!-- end Container Wrapper -->
+ 
+ 
+<!-- start Back To Top -->
+<div id="back-to-top">
+   <a href="#"><i class="ion-ios-arrow-up"></i></a>
+</div>
+<!-- end Back To Top -->
+
+
+<!-- JS -->
+	<script th:replace="~{fragment/outil::foot}"/>
+
+<script th:src="@{/js/validator.min.js}"></script>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" th:src="@{/js/infobox.js}"></script>
+
+<script>
+	function initialize() {
+
+// Create an array of styles.
+var styles = [{"featureType":"all","elementType":"labels","stylers":[{"lightness":63},{"hue":"#ff0000"}]},{"featureType":"administrative","elementType":"all","stylers":[{"hue":"#000bff"},{"visibility":"on"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"administrative","elementType":"labels","stylers":[{"color":"#4a4a4a"},{"visibility":"on"}]},{"featureType":"administrative","elementType":"labels.text","stylers":[{"weight":"0.01"},{"color":"#727272"},{"visibility":"on"}]},{"featureType":"administrative.country","elementType":"labels","stylers":[{"color":"#ff0000"}]},{"featureType":"administrative.country","elementType":"labels.text","stylers":[{"color":"#ff0000"}]},{"featureType":"administrative.province","elementType":"geometry.fill","stylers":[{"visibility":"on"}]},{"featureType":"administrative.province","elementType":"labels.text","stylers":[{"color":"#545454"}]},{"featureType":"administrative.locality","elementType":"labels.text","stylers":[{"visibility":"on"},{"color":"#737373"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text","stylers":[{"color":"#7c7c7c"},{"weight":"0.01"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text","stylers":[{"color":"#404040"}]},{"featureType":"landscape","elementType":"all","stylers":[{"lightness":16},{"hue":"#ff001a"},{"saturation":-61}]},{"featureType":"poi","elementType":"labels.text","stylers":[{"color":"#828282"},{"weight":"0.01"}]},{"featureType":"poi.government","elementType":"labels.text","stylers":[{"color":"#4c4c4c"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"hue":"#00ff91"}]},{"featureType":"poi.park","elementType":"labels.text","stylers":[{"color":"#7b7b7b"}]},{"featureType":"road","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels.text","stylers":[{"color":"#999999"},{"visibility":"on"},{"weight":"0.01"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"hue":"#ff0011"},{"lightness":53}]},{"featureType":"road.highway","elementType":"labels.text","stylers":[{"color":"#626262"}]},{"featureType":"transit","elementType":"labels.text","stylers":[{"color":"#676767"},{"weight":"0.01"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#0055ff"}]}];
+
+var loc, map, marker, infobox;
+
+var styledMap = new google.maps.StyledMapType(styles,  {name: "Styled Map"});
+
+loc = new google.maps.LatLng($("#map").attr("data-lat"), $("#map").attr("data-lon"));
+
+map = new google.maps.Map(document.getElementById("map"), {
+	zoom: 14,
+	center: loc,
+	scrollwheel: false,
+	//draggable:true,
+	navigationControl: false,
+	scaleControl: false,
+	mapTypeControl:false,
+	streetViewControl: false,
+	mapTypeControlOptions: {
+		mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+	},
+	mapTypeId: google.maps.MapTypeId.ROADMAP,
+});
+
+//Associate the styled map with the MapTypeId and set it to display.
+map.mapTypes.set('map_style', styledMap);
+map.setMapTypeId('map_style');
+
+marker = new google.maps.Marker({
+	map: map,
+	position: loc,
+	//disableDefaultUI:true,
+
+	icon:'images/map-marker/00.png',
+	//pixelOffset: new google.maps.Size(-140, -100),
+	visible: true
+
+	//animation: google.maps.Animation.DROP
+});
+
+infobox = new InfoBox({
+	content: document.getElementById("infobox"),
+	disableAutoPan: true,
+	//maxWidth: 150,
+	pixelOffset: new google.maps.Size(0, -50),
+	zIndex: null,
+	alignBottom: true,
+	isHidden: false,
+	//closeBoxMargin: "12px 4px 2px 2px",
+	closeBoxURL: "images/infobox-close.png",
+	closeBoxClass:"infoBox-close",
+	infoBoxClearance: new google.maps.Size(1, 1)
+});
+
+openInfoBox(marker);
+
+google.maps.event.addListener(marker, 'click', function() {
+	openInfoBox(this);
+});
+
+function openInfoBox(thisMarker){
+	map.panTo(loc);
+	map.panBy(0,-80);
+	infobox.open(map, thisMarker);
+}
+
+var center;
+function calculateCenter() {
+	center = map.getCenter();
+}
+google.maps.event.addDomListener(map, 'idle', function() {
+	calculateCenter();
+});
+google.maps.event.addDomListener(window, 'resize', function() {
+	map.setCenter(center);
+});
+
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,1431 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Title Of Site -->
+	<title>Thefoody - Order Online Portal Responsive HTML Template</title>
+	<meta name="description" content="TheFoody is a food ordering platform which brings restaurants and food lovers together. Food ordering online is easier than any other platforms.">
+	<meta name="keywords" content="food, order online, restaurant, reservation, book a table, foodies, cafe, recipes, menu, dishes, chefs and cooking experts ">
+	<meta name="author" content="iglyphic">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link  th:replace="~{fragment/outil::css}"/>
+	
+</head>
+
+
+<body class="not-transparent-header">
+
+	<!-- start Container Wrapper -->
+	<div class="container-wrapper">
+
+		<!-- start Header -->
+		<header id="header">
+			<!-- start Navbar (Header) -->
+			<nav class="navbar navbar-default navbar-fixed-top navbar-sticky-function">
+
+				<div class="container">
+
+					<div class="logo-wrapper">
+						<div class="logo">
+							<a href="index.html"><img th:src="@{/images/logo-51x70.png}" alt="Logo" /></a>
+						</div>
+					</div>
+
+					<div id="navbar" class="navbar-nav-wrapper navbar-arrow">
+
+						<ul class="nav navbar-nav" id="responsive-menu">
+							<li>
+								<a href="/">Accueil</a>
+							</li>
+
+							<li>
+								<a href="/restaurant/register">Devenir partenaire</a>
+							</li>
+							<li>
+								<a href="">Information</a>
+								<ul>
+									<li><a href="/accueil/how">Guide</a></li>
+									<li><a href="/accueil/apropos">A propos de nous</a></li>
+									<li><a href="/accueil/contact">Contact</a></li>
+									<li><a href="/accueil/policy">Politique de confidentialité</a></li>
+								</ul>
+							</li>
+
+						</ul>
+
+					</div><!--/.nav-collapse -->
+
+					<div class="nav-mini-wrapper">
+						<ul class="nav-mini sign-in">
+							<li><a href="/restaurant/register"><font size="3">S'identifier</font></a></li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div id="slicknav-mobile"></div>
+
+			</nav>
+			<!-- end Navbar (Header) -->
+		</header>
+		<!-- end Header -->
+
+		<!-- start Main Wrapper -->
+		<div class="main-wrapper">
+
+			<!-- start restaurant search -->
+			<div class="second-search-restaurant-wrapper">
+
+				<div class="container">
+
+					<form>
+
+						<div class="second-search-result-inner">
+							<span class="labeling">Recherche</span>
+							<div class="row">
+
+								<div class="col-xss-12 col-xs-6 col-sm-6 col-md-5">
+									<div class="form-group form-lg">
+										<input type="text" class="form-control" placeholder="ex. SW6 6LG Londres" />
+									</div>
+								</div>
+
+								<div class="col-xss-12 col-xs-6 col-sm-6 col-md-5">
+									<div class="form-group form-lg">
+										<input type="text" class="form-control" placeholder="Trouver un restaurant" />
+									</div>
+								</div>
+
+								<div class="col-xss-12 col-xs-6 col-sm-4 col-md-2">
+									<button class="btn btn-block">Aller</button>
+								</div>
+
+							</div>
+						</div>
+
+					</form>
+
+
+
+				</div>
+
+			</div>
+			<!-- end restaurant search -->
+		
+			<!-- start hero-header -->
+			<div class="breadcrumb-wrapper">
+			
+				<div class="container">
+				
+					<ol class="breadcrumb-list booking-step">
+						<li><a href="#">Home</a></li>
+						<li><span>Tous les restaurants</span></li>
+					</ol>
+					
+				</div>
+				
+			</div>
+			<!-- end hero-header -->
+			
+			<div class="section sm">
+
+				<div class="container">
+				
+					<div class="search-restaurant-wrapper mt-0">
+					
+						<div class="search-restaurant-box">
+						
+							<div class="row">
+							
+								<div class="col-sm-4 col-md-3">
+								
+									<div class="search-restaurant-box-title">
+
+										<h3 class="text-primary text-lowercase mb-0"><a href="#">Desserts</a></h3>
+										<span>754 restaurants</span>
+										
+									</div>
+									
+								</div>
+								
+								<div class="col-sm-8 col-md-9">
+								
+									<div class="search-restaurant-box-content">
+									
+										<div class="search-restaurant-box-inner">
+										
+											<div class="row gap-20">
+											
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Spice Fusion</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">The Royal Tandoori</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Juthie's Spice</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Rannaghor</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Juboraj Rhiwbina</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Shabab Curry House</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">The Fat Indian</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Mamataz Mahal</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Bombay Blues</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Hungry Yeti</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Tamarind</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Saffron Indian Takeaway</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Bollywood Lounge</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Eastern Star Tandoori Takeaway</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Indigo</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Maharajah Spice</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Curry Gate</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Grill N Chill</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">Memories Of India</a>
+												
+												</div>
+												
+												<div class="col-sm-6 col-md-4">
+												
+													<a href="#">India Chef</a>
+												
+												</div>
+												
+											</div>
+										
+										</div>
+										
+									</div>
+
+								</div>
+								
+							</div>
+						
+						</div>
+						
+						<div class="search-restaurant-box">
+						
+							<div class="row">
+							
+								<div class="col-sm-4 col-md-3">
+								
+									<div class="search-restaurant-box-title">
+
+										<h3 class="text-primary text-lowercase mb-0"><a href="#">Méditéranéen</a></h3>
+										<span>147 restaurant</span>
+										
+									</div>
+									
+								</div>
+
+								<div class="col-sm-8 col-md-9">
+
+									<div class="search-restaurant-box-content">
+
+										<div class="search-restaurant-box-inner">
+
+											<div class="row gap-20">
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Spice Fusion</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Royal Tandoori</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juthie's Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Rannaghor</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juboraj Rhiwbina</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Shabab Curry House</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Fat Indian</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Mamataz Mahal</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bombay Blues</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Hungry Yeti</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Tamarind</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Saffron Indian Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bollywood Lounge</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Eastern Star Tandoori Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Indigo</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Maharajah Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Curry Gate</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Grill N Chill</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Memories Of India</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">India Chef</a>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+								
+							</div>
+						
+						</div>
+						
+						<div class="search-restaurant-box">
+						
+							<div class="row">
+							
+								<div class="col-sm-4 col-md-3">
+								
+									<div class="search-restaurant-box-title">
+
+										<h3 class="text-primary text-lowercase mb-0"><a href="#">Mexicain</a></h3>
+										<span>214 restaurant</span>
+										
+									</div>
+									
+								</div>
+
+								<div class="col-sm-8 col-md-9">
+
+									<div class="search-restaurant-box-content">
+
+										<div class="search-restaurant-box-inner">
+
+											<div class="row gap-20">
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Spice Fusion</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Royal Tandoori</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juthie's Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Rannaghor</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juboraj Rhiwbina</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Shabab Curry House</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Fat Indian</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Mamataz Mahal</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bombay Blues</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Hungry Yeti</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Tamarind</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Saffron Indian Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bollywood Lounge</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Eastern Star Tandoori Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Indigo</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Maharajah Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Curry Gate</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Grill N Chill</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Memories Of India</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">India Chef</a>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+								
+							</div>
+						
+						</div>
+						
+						<div class="search-restaurant-box">
+						
+							<div class="row">
+							
+								<div class="col-sm-4 col-md-3">
+								
+									<div class="search-restaurant-box-title">
+
+										<h3 class="text-primary text-lowercase mb-0"><a href="#">Sushi</a></h3>
+										<span>541 restaurant</span>
+										
+									</div>
+									
+								</div>
+
+								<div class="col-sm-8 col-md-9">
+
+									<div class="search-restaurant-box-content">
+
+										<div class="search-restaurant-box-inner">
+
+											<div class="row gap-20">
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Spice Fusion</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Royal Tandoori</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juthie's Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Rannaghor</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juboraj Rhiwbina</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Shabab Curry House</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Fat Indian</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Mamataz Mahal</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bombay Blues</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Hungry Yeti</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Tamarind</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Saffron Indian Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bollywood Lounge</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Eastern Star Tandoori Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Indigo</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Maharajah Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Curry Gate</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Grill N Chill</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Memories Of India</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">India Chef</a>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+								
+							</div>
+						
+						</div>
+						
+						<div class="search-restaurant-box">
+						
+							<div class="row">
+							
+								<div class="col-sm-4 col-md-3">
+								
+									<div class="search-restaurant-box-title">
+
+										<h3 class="text-primary text-lowercase mb-0"><a href="#">Pizza</a></h3>
+										<span>254 restaurant</span>
+										
+									</div>
+									
+								</div>
+
+								<div class="col-sm-8 col-md-9">
+
+									<div class="search-restaurant-box-content">
+
+										<div class="search-restaurant-box-inner">
+
+											<div class="row gap-20">
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Spice Fusion</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Royal Tandoori</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juthie's Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Rannaghor</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juboraj Rhiwbina</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Shabab Curry House</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Fat Indian</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Mamataz Mahal</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bombay Blues</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Hungry Yeti</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Tamarind</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Saffron Indian Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bollywood Lounge</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Eastern Star Tandoori Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Indigo</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Maharajah Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Curry Gate</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Grill N Chill</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Memories Of India</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">India Chef</a>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+								
+							</div>
+						
+						</div>
+						
+						<div class="search-restaurant-box">
+						
+							<div class="row">
+							
+								<div class="col-sm-4 col-md-3">
+								
+									<div class="search-restaurant-box-title">
+
+										<h3 class="text-primary text-lowercase mb-0"><a href="#">Kebab</a></h3>
+										<span>524 restaurant</span>
+										
+									</div>
+									
+								</div>
+
+								<div class="col-sm-8 col-md-9">
+
+									<div class="search-restaurant-box-content">
+
+										<div class="search-restaurant-box-inner">
+
+											<div class="row gap-20">
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Spice Fusion</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Royal Tandoori</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juthie's Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Rannaghor</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juboraj Rhiwbina</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Shabab Curry House</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Fat Indian</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Mamataz Mahal</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bombay Blues</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Hungry Yeti</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Tamarind</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Saffron Indian Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bollywood Lounge</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Eastern Star Tandoori Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Indigo</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Maharajah Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Curry Gate</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Grill N Chill</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Memories Of India</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">India Chef</a>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+								
+							</div>
+						
+						</div>
+						
+						<div class="search-restaurant-box">
+						
+							<div class="row">
+							
+								<div class="col-sm-4 col-md-3">
+								
+									<div class="search-restaurant-box-title">
+
+										<h3 class="text-primary text-lowercase mb-0"><a href="#">Italien</a></h3>
+										<span>547 restaurant</span>
+										
+									</div>
+									
+								</div>
+
+								<div class="col-sm-8 col-md-9">
+
+									<div class="search-restaurant-box-content">
+
+										<div class="search-restaurant-box-inner">
+
+											<div class="row gap-20">
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Spice Fusion</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Royal Tandoori</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juthie's Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Rannaghor</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Juboraj Rhiwbina</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Shabab Curry House</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">The Fat Indian</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Mamataz Mahal</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bombay Blues</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Hungry Yeti</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Tamarind</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Saffron Indian Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Bollywood Lounge</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Eastern Star Tandoori Takeaway</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Kasturi Authentic Indian Cuisine</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Indigo</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Maharajah Spice</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Curry Gate</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Grill N Chill</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">Memories Of India</a>
+
+												</div>
+
+												<div class="col-sm-6 col-md-4">
+
+													<a href="#">India Chef</a>
+
+												</div>
+
+											</div>
+
+										</div>
+
+									</div>
+
+								</div>
+								
+							</div>
+						
+						</div>
+						
+					</div>
+
+				</div>
+				
+			</div>
+
+			<!-- start footer -->
+			<!-- start footer -->
+			<footer class="footer-wrapper-area">
+
+				<!-- start footer area -->
+				<div class="footer-area-content">
+					<!-- Newsletter -->
+					
+					<!-- END: Newsletter -->
+
+					<div class="container">
+						<div class="footer-wrapper style-3">
+							<footer class="type-1">
+								<div class="footer-columns-entry">
+									<div class="row">
+										<div class="col-md-4 col-sm-4">
+											<h3 class="column-title">Cuisines populaires</h3>
+											<ul class="column">
+												<li><a href="all-cuisines.html">Tout type de cuisine</a></li>
+												<li><a href="#">Italien</a></li>
+												<li><a href="#">Chinois</a></li>
+												<li><a href="#">Dessert turc</a></li>
+												<li><a href="#">Fruits de mer européens</a></li>
+												<li><a href="#">Moyen orient français</a></li>
+											</ul>
+											<div class="clear"></div>
+										</div>
+
+										<div class="col-md-4 col-sm-4">
+											<h3 class="column-title">Restaurants</h3>
+											<ul class="column">
+												<li><a href="restaurant-search.html">Recherche restaurant</a></li>
+												<li><a href="#">Par mot clé</a></li>
+												<li><a href="#">Par localité</a></li>
+												<li><a href="#">Par code postal</a></li>
+												<li><a href="#"> Par categorie</a></li>
+												<li><a href="#">Par region</a></li>
+												<li><a href="#">Par ville</a></li>
+											</ul>
+											<div class="clear"></div>
+										</div>
+
+										<div class="col-md-4 col-sm-4">
+											<h3 class="column-title">Click.Resto</h3>
+											<ul class="column">
+												<li><a href="about-us.html">A propos de nous</a></li>
+												<li><a href="blog.html">Nouvelles</a></li>
+												<li><a href="#">Conditions générales</a></li>
+												<li><a href="privacy-policy.html"> Politique de confidentialité</a></li>
+											</ul>
+											<div class="clear"></div>
+										</div>
+									</div>
+								</div>
+							</footer>
+						</div>
+					</div>
+
+
+				</div>
+				<!-- footer area end -->
+
+				<div class="bottom-footer">
+
+					<div class="container">
+
+						<div class="row">
+
+							<div class="col-sm-6 col-md-6">
+
+								<p class="copy-right">&#169; Copyright 2022 CDAN-02</p>
+
+							</div>
+							<div class="col-sm-6 col-md-6">
+								<ul class="bottom-footer-menu for-social">
+									<li><a href="#"><i class="ri ri-twitter" data-toggle="tooltip" data-placement="top" title="twitter"></i></a></li>
+									<li><a href="#"><i class="ri ri-facebook" data-toggle="tooltip" data-placement="top" title="facebook"></i></a></li>
+									<li><a href="#"><i class="ri ri-google-plus" data-toggle="tooltip" data-placement="top" title="google plus"></i></a></li>
+									<li><a href="#"><i class="ri ri-youtube-play" data-toggle="tooltip" data-placement="top" title="youtube"></i></a></li>
+								</ul>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</footer>
+			<!-- end footer -->
+			<!-- end footer -->
+			
+		</div>
+		<!-- end Main Wrapper -->
+
+	</div> <!-- / .wrapper -->
+	<!-- end Container Wrapper -->
+ 
+ 
+<!-- start Back To Top -->
+<div id="back-to-top">
+   <a href="#"><i class="ion-ios-arrow-up"></i></a>
+</div>
+<!-- end Back To Top -->
+
+
+<!-- JS -->
+	<script th:replace="~{fragment/outil::foot}"/>
+
+
+</body>
+
+
+</html>

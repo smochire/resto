@@ -304,7 +304,7 @@
 											<h3 class="column-title">Restaurants</h3>
 											<ul class="column">
 												<th:block th:each="restaurant: ${cuisines}">
-													<li><a th:href="*{'/accueil/client'+restaurant.id}"><span  th:text="${restaurant.nomResto}"></span></a></li>
+													<li><a th:href="*{'/accueil/client/'+restaurant.id}"><span  th:text="${restaurant.nomResto}"></span></a></li>
 												</th:block>
 											</ul>
 											<div class="clear"></div>

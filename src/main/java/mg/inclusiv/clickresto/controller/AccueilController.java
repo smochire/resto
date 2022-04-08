@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @Transactional
-public class AccueilController {
+public class  AccueilController {
 
     @Autowired
     RestaurantService restaurantService;

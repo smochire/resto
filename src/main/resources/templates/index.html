@@ -200,7 +200,7 @@
                                       <div class="col-sm-pull-4 col-sm-6" >
                                             <div class="product-item" >
 												<th:block th:each="produit:${menu}">
-													<div class="pi-pic">
+													<div class="pi-pic  col-sm-4">
 														<a th:href="*{'/accueil/client/'+produit.restaurantId}"><img th:src="*{'data:image/jpeg;base64,'+produit.image}" alt=""></a>
 													</div>
 													<div class="pi-text">

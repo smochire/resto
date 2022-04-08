@@ -197,9 +197,10 @@
 						</div>
 						
 					        <div class="row">
-                                      <div class=" col-6" >
+                                      <div class="col-sm-pull-4 col-6" >
+										  <th:block th:each="produit:${menu}">
                                             <div class="product-item" >
-												<th:block th:each="produit:${menu}">
+
 													<div class="pi-pic  ">
 														<a th:href="*{'/accueil/client/'+produit.restaurantId}"><img th:src="*{'data:image/jpeg;base64,'+produit.image}" alt=""></a>
 													</div>
@@ -212,8 +213,9 @@
 																				$14.00
 														</div>
 													</div>
-												</th:block>
+
 											</div>
+										  </th:block>
                                         </div>
 							</div>
 					</div>
